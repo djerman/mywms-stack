@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.pkg.client.pkg.rpc.PkgRpcService
+path: D3C512805F4CE0D880A9E5C9E73EC819.gwt.rpc

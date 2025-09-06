@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.gxtdto.client.i18n.remotemessages.rpc.RemoteMessageRpcService
+path: 0A38048F7BB2DC1F0CF4BA4274627123.gwt.rpc

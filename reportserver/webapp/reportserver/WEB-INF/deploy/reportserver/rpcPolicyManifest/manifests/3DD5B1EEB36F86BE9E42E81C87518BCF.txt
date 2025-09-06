@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.ftp.client.ftp.rpc.FtpsRpcService
+path: EE566C3C7654D2EFF3E7326B8749355C.gwt.rpc

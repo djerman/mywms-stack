@@ -1,0 +1,123 @@
+services:
+  postgres:
+    image: postgres:16.9
+    container_name: pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      # Проследи апликационе вредности да би их init-скрипте користиле
+      MYWMS_DB: ${MYWMS_DB}
+      MYWMS_USER: ${MYWMS_USER}
+      MYWMS_PASS: ${MYWMS_PASS}
+      RS_DB: ${RS_DB}
+      RS_USER: ${RS_USER}
+      RS_PASS: ${RS_PASS}
+    ports:
+      - "${PG_PORT}:5432"
+    volumes:
+      - ${PG_HOST_DATA}:/var/lib/postgresql/data
+      - ./postgres/init:/docker-entrypoint-initdb.d:ro
+      - ./postgres/conf/postgresql.conf:/etc/postgresql/postgresql.conf:ro
+      - ./postgres/conf/pg_hba.conf:/etc/postgresql/pg_hba.conf:ro
+      - ${PG_HOST_BACKUP}:/backups
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    command: ["-c", "config_file=/etc/postgresql/postgresql.conf", "-c", "hba_file=/etc/postgresql/pg_hba.conf"]
+
+  rs_init:
+    image: postgres:16.9
+    container_name: rs_init
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - ./reportserver/webapp/reportserver/ddl:/ddl:ro
+    entrypoint: ["bash","-lc"]
+    command: >
+      set -euo pipefail;
+      DDL=$(ls -1 /ddl/*PostgreSQL*_CREATE.sql | head -n1);
+      echo "[rs_init] Увозим DDL: $DDL";
+      psql -h pg -U ${POSTGRES_USER} -d ${RS_DB} -v ON_ERROR_STOP=1 -f "$DDL";
+      echo "[rs_init] Подешавам власништво и дозволе...";
+      psql -h pg -U ${POSTGRES_USER} -d ${RS_DB} -v ON_ERROR_STOP=1 -c "ALTER DATABASE ${RS_DB} OWNER TO ${RS_USER}; ALTER SCHEMA public OWNER TO ${RS_USER};";
+      psql -h pg -U ${POSTGRES_USER} -d ${RS_DB} -Atc "SELECT 'ALTER TABLE '||quote_ident(schemaname)||'.'||quote_ident(tablename)||' OWNER TO ${RS_USER};' FROM pg_tables WHERE schemaname='public';" | psql -h pg -U ${POSTGRES_USER} -d ${RS_DB};
+      psql -h pg -U ${POSTGRES_USER} -d ${RS_DB} -Atc "SELECT 'ALTER SEQUENCE '||quote_ident(sequence_schema)||'.'||quote_ident(sequence_name)||' OWNER TO ${RS_USER};' FROM information_schema.sequences WHERE sequence_schema='public';" | psql -h pg -U ${POSTGRES_USER} -d ${RS_DB};
+      psql -h pg -U ${POSTGRES_USER} -d ${RS_DB} -v ON_ERROR_STOP=1 -c "GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO ${RS_USER}; GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO ${RS_USER};";
+      psql -h pg -U ${POSTGRES_USER} -d ${RS_DB} -v ON_ERROR_STOP=1 -c "ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO ${RS_USER}; ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO ${RS_USER};";
+      echo "[rs_init] Готово."
+    restart: "no"
+
+  mywms:
+    build: ./mywms
+    image: mywms-wf22:latest
+    container_name: mywms
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: pg
+      DB_PORT: 5432
+      DB_NAME: ${MYWMS_DB}
+      DB_USER: ${MYWMS_USER}
+      DB_PASS: ${MYWMS_PASS}
+      JAVA_OPTS: "-Xms1g -Xmx2g -Djava.net.preferIPv4Stack=true"
+    ports:
+      - "${MYWMS_HTTP}:8080"
+      - "${MYWMS_MGMT}:9990"
+    volumes:
+      - ./mywms/deployments:/opt/wildfly/standalone/deployments
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/"]
+      interval: 20s
+      timeout: 5s
+      retries: 15
+
+  reportserver:
+    build: ./reportserver
+    container_name: reportserver
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rs_init:
+        condition: service_completed_successfully
+    environment:
+      TZ: Europe/Belgrade
+      JAVA_OPTS: "-Xms1g -Xmx2g -Djava.net.preferIPv4Stack=true -Drs.configdir=/config -Drs.lucene.dir=/lucene_index -Duser.timezone=Europe/Belgrade"
+    ports:
+      - "${RS_HTTP}:8080"
+    volumes:
+      - ./reportserver/config:/config:ro
+      - ./reportserver/logs:/usr/local/tomcat/logs
+      - ./reportserver/lucene:/lucene_index
+      # - ./reportserver/webapp/reportserver:/usr/local/tomcat/webapps/reportserver  # опционално dev-мапирање
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/reportserver/"]
+      interval: 20s
+      timeout: 5s
+      retries: 15
+
+  pgadmin:
+    image: dpage/pgadmin4:8
+    container_name: pgadmin
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "${PGADMIN_HTTP}:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
+volumes:
+  pgadmin_data:

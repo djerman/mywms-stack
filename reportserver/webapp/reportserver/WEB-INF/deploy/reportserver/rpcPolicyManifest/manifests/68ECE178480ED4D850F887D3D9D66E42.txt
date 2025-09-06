@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.saikupivot.client.SaikuPivotRpcService
+path: 5695D546BBD319D4C0397886241515DD.gwt.rpc

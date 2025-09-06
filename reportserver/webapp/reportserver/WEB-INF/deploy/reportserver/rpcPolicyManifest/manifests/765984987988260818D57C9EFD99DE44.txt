@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.scripting.client.scripting.rpc.ScriptingRpcService
+path: D8F7B29A844B5FB986ACACE2FE0063EA.gwt.rpc

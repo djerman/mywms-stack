@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.gf.client.homepage.rpc.HomepageRpcService
+path: BF7A5A4542518CF3ED06D86001463BD8.gwt.rpc

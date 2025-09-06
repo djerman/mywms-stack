@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.markdown.client.markdown.rpc.MarkdownRpcService
+path: 934F7FE76C43E09AD67C9684ADD7844D.gwt.rpc

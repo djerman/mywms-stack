@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.scriptdatasink.client.scriptdatasink.rpc.ScriptDatasinkRpcService
+path: 3E87A58F8CC94537CDF4FA789654F1C4.gwt.rpc

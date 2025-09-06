@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.transport.client.transport.rpc.TransportTreeLoader
+path: 7C7524F456600F325E4D4473DDCAD5F3.gwt.rpc

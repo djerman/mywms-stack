@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.scheduler.client.scheduler.rpc.SchedulerRpcService
+path: C10C3E25D27B50408317662F027D23B4.gwt.rpc

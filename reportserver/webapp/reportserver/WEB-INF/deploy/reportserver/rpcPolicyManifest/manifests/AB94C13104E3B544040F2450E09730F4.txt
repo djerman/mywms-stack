@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.fileserver.client.fileserver.eximport.im.rpc.FileServerImportRpcService
+path: 1A5F5C3677D5E66459973486630B82CB.gwt.rpc

@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.security.ext.client.crypto.rpc.CryptoRpcService
+path: C270104C6E9589D41B34652E736AA58C.gwt.rpc

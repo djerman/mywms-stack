@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.gf.client.upload.rpc.FileUploadRpcService
+path: 0D47B644B3370AB8D31BBCFC3C6D70E1.gwt.rpc

@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.authenticator.cr.client.ChallengeResponseRpcService
+path: B6F10AD9852902823F606D81A985ACC7.gwt.rpc

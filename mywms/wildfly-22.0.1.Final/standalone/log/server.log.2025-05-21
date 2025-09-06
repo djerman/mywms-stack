@@ -1,0 +1,967 @@
+2025-05-21 18:08:46,608 INFO  [org.jboss.modules] (main) JBoss Modules version 1.11.0.Final
+2025-05-21 18:08:47,259 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.12.Final
+2025-05-21 18:08:47,269 INFO  [org.jboss.threads] (main) JBoss Threads version 2.4.0.Final
+2025-05-21 18:08:47,395 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: WildFly Full 22.0.1.Final (WildFly Core 14.0.1.Final) starting
+2025-05-21 18:08:47,397 DEBUG [org.jboss.as.config] (MSC service thread 1-2) Configured system properties:
+	[Standalone] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/jboss-modules.jar
+	java.class.version = 55.0
+	java.home = /usr/lib/jvm/java-11-openjdk-amd64
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/local/cuda/lib64::/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 11.0.27+6-post-Ubuntu-0ubuntu124.04
+	java.specification.maintenance.version = 3
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 11
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Ubuntu
+	java.vendor.url = https://ubuntu.com/
+	java.vendor.url.bug = https://bugs.launchpad.net/ubuntu/+source/openjdk-lts
+	java.version = 11.0.27
+	java.version.date = 2025-04-15
+	java.vm.compressedOopsMode = 32-bit
+	java.vm.info = mixed mode, sharing
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 11
+	java.vm.vendor = Ubuntu
+	java.vm.version = 11.0.27+6-post-Ubuntu-0ubuntu124.04
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	jboss.bind.address = 0.0.0.0
+	jboss.home.dir = /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final
+	jboss.host.name = hpprobook
+	jboss.modules.dir = /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = hpprobook
+	jboss.qualified.host.name = hpprobook
+	jboss.server.base.dir = /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone
+	jboss.server.config.dir = /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/configuration
+	jboss.server.data.dir = /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/data
+	jboss.server.deploy.dir = /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/data/content
+	jboss.server.log.dir = /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/log
+	jboss.server.name = hpprobook
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/tmp
+	jdk.debug = release
+	line.separator = 
+
+	logging.configuration = file:/home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/configuration/logging.properties
+	module.path = /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/modules
+	org.jboss.boot.log.file = /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	os.arch = amd64
+	os.name = Linux
+	os.version = 6.8.0-60-generic
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.library.path = /usr/lib/jvm/java-11-openjdk-amd64/lib
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.desktop = gnome
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/jboss-modules.jar -mp /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/modules org.jboss.as.standalone -Djboss.home.dir=/home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final -Djboss.server.base.dir=/home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone -b 0.0.0.0
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = RS
+	user.dir = /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final
+	user.home = /home/goran
+	user.language = sr
+	user.name = goran
+	user.timezone = Europe/Belgrade
+2025-05-21 18:08:47,401 DEBUG [org.jboss.as.config] (MSC service thread 1-2) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true --add-exports=java.base/sun.nio.ch=ALL-UNNAMED --add-exports=jdk.unsupported/sun.misc=ALL-UNNAMED --add-exports=jdk.unsupported/sun.reflect=ALL-UNNAMED -Dorg.jboss.boot.log.file=/home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/log/server.log -Dlogging.configuration=file:/home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/configuration/logging.properties 
+2025-05-21 18:08:48,330 INFO  [org.wildfly.security] (ServerService Thread Pool -- 28) ELY00001: WildFly Elytron version 1.14.1.Final
+2025-05-21 18:08:49,039 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2025-05-21 18:08:49,084 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 14) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2025-05-21 18:08:49,365 INFO  [org.jboss.as.repository] (ServerService Thread Pool -- 30) WFLYDR0001: Content added at location /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/data/content/45/c1c2b41d2efb7e0f211f4da98171a1ec84e606/content
+2025-05-21 18:08:49,422 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2025-05-21 18:08:49,444 INFO  [org.xnio] (MSC service thread 1-4) XNIO version 3.8.4.Final
+2025-05-21 18:08:49,455 INFO  [org.xnio.nio] (MSC service thread 1-4) XNIO NIO Implementation Version 3.8.4.Final
+2025-05-21 18:08:49,507 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 53) WFLYCLINF0001: Activating Infinispan subsystem.
+2025-05-21 18:08:49,508 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 52) WFLYHEALTH0001: Activating Base Health Subsystem
+2025-05-21 18:08:49,532 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 66) WFLYNAM0001: Activating Naming Subsystem
+2025-05-21 18:08:49,533 INFO  [org.wildfly.extension.microprofile.opentracing] (ServerService Thread Pool -- 65) WFLYTRACEXT0001: Activating MicroProfile OpenTracing Subsystem
+2025-05-21 18:08:49,545 INFO  [org.wildfly.extension.microprofile.jwt.smallrye._private] (ServerService Thread Pool -- 64) WFLYJWT0001: Activating WildFly MicroProfile JWT Subsystem
+2025-05-21 18:08:49,554 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 74) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2025-05-21 18:08:49,551 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 54) WFLYIO001: Worker 'default' has auto-configured to 16 IO threads with 128 max task threads based on your 8 available processors
+2025-05-21 18:08:49,586 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 55) WFLYRS0016: RESTEasy version 3.14.0.Final
+2025-05-21 18:08:49,585 INFO  [org.wildfly.extension.microprofile.config.smallrye._private] (ServerService Thread Pool -- 63) WFLYCONF0001: Activating WildFly MicroProfile Config Subsystem
+2025-05-21 18:08:49,598 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 72) WFLYSEC0002: Activating Security Subsystem
+2025-05-21 18:08:49,584 INFO  [org.wildfly.extension.metrics] (ServerService Thread Pool -- 62) WFLYMETRICS0001: Activating Base Metrics Subsystem
+2025-05-21 18:08:49,592 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 60) WFLYJSF0007: Activated the following JSF Implementations: [main]
+2025-05-21 18:08:49,607 INFO  [org.jboss.as.connector] (MSC service thread 1-1) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar @VERSION@)
+2025-05-21 18:08:49,611 INFO  [org.jboss.remoting] (MSC service thread 1-8) JBoss Remoting version 5.0.20.Final
+2025-05-21 18:08:49,638 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0003: Undertow 2.2.4.Final starting
+2025-05-21 18:08:49,636 INFO  [org.jboss.as.security] (MSC service thread 1-6) WFLYSEC0001: Current PicketBox version=5.0.3.Final-redhat-00007
+2025-05-21 18:08:49,636 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 76) WFLYWS0002: Activating WebServices Extension
+2025-05-21 18:08:49,647 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 44) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+2025-05-21 18:08:49,724 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) WFLYJCA0018: Started Driver service with driver-name = h2
+2025-05-21 18:08:49,728 INFO  [org.jboss.as.naming] (MSC service thread 1-3) WFLYNAM0003: Starting Naming Service
+2025-05-21 18:08:49,734 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-8) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2025-05-21 18:08:49,772 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-8) WFLYELY00023: KeyStore file '/home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/configuration/application.keystore' does not exist. Used blank.
+2025-05-21 18:08:49,802 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 75) WFLYUT0014: Creating file handler for path '/home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2025-05-21 18:08:49,807 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-8) WFLYELY01084: KeyStore /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self-signed certificate for host localhost
+2025-05-21 18:08:49,825 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0012: Started server default-server.
+2025-05-21 18:08:49,829 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0018: Host default-host starting
+2025-05-21 18:08:49,883 INFO  [org.jboss.as.ejb3] (MSC service thread 1-7) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
+2025-05-21 18:08:49,883 INFO  [org.jboss.as.ejb3] (MSC service thread 1-5) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
+2025-05-21 18:08:49,933 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow HTTP listener default listening on 0.0.0.0:8080
+2025-05-21 18:08:50,028 INFO  [org.jboss.as.ejb3] (MSC service thread 1-6) WFLYEJB0493: EJB subsystem suspension complete
+2025-05-21 18:08:50,079 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2025-05-21 18:08:50,314 INFO  [org.jboss.as.patching] (MSC service thread 1-3) WFLYPAT0050: WildFly Full cumulative patch ID is: base, one-off patches include: none
+2025-05-21 18:08:50,332 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-4) WFLYDM0111: Keystore /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+2025-05-21 18:08:50,337 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-8) WFLYDS0013: Started FileSystemDeploymentService for directory /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/deployments
+2025-05-21 18:08:50,356 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0027: Starting deployment of "mywms.ear" (runtime-name: "mywms.ear")
+2025-05-21 18:08:50,356 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0027: Starting deployment of "postgresql-42.2.19.jar" (runtime-name: "postgresql-42.2.19.jar")
+2025-05-21 18:08:50,367 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0006: Undertow HTTPS listener https listening on 0.0.0.0:8443
+2025-05-21 18:08:50,456 INFO  [org.jboss.ws.common.management] (MSC service thread 1-1) JBWS022052: Starting JBossWS 5.4.2.Final (Apache CXF 3.3.7) 
+2025-05-21 18:08:50,995 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 42.2)
+2025-05-21 18:08:51,015 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) WFLYJCA0018: Started Driver service with driver-name = postgresql-42.2.19.jar
+2025-05-21 18:08:51,041 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-8) WFLYJCA0001: Bound data source [java:/losDS]
+2025-05-21 18:08:51,474 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 78) ISPN000128: Infinispan version: Infinispan 'Corona Extra' 11.0.8.Final
+2025-05-21 18:08:51,542 INFO  [org.infinispan.CONFIG] (MSC service thread 1-4) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2025-05-21 18:08:51,546 INFO  [org.infinispan.CONFIG] (MSC service thread 1-4) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2025-05-21 18:08:51,651 INFO  [org.infinispan.PERSISTENCE] (ServerService Thread Pool -- 78) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.spi.marshalling.InfinispanProtoStreamMarshaller'
+2025-05-21 18:08:51,831 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 78) WFLYCLINF0002: Started http-remoting-connector cache from ejb container
+2025-05-21 18:08:52,170 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0207: Starting subdeployment (runtime-name: "los.mobile-web.war")
+2025-05-21 18:08:52,170 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0207: Starting subdeployment (runtime-name: "project-persistence.jar")
+2025-05-21 18:08:52,170 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0207: Starting subdeployment (runtime-name: "project-ejb.jar")
+2025-05-21 18:08:52,170 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0207: Starting subdeployment (runtime-name: "wms2-ejb.jar")
+2025-05-21 18:08:52,170 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0207: Starting subdeployment (runtime-name: "mywms.as-ejb.jar")
+2025-05-21 18:08:52,170 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0207: Starting subdeployment (runtime-name: "los-ejb.jar")
+2025-05-21 18:08:52,170 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0207: Starting subdeployment (runtime-name: "los.mobile-ejb.jar")
+2025-05-21 18:08:52,320 INFO  [org.jboss.as.jpa] (MSC service thread 1-1) WFLYJPA0002: Read persistence.xml for myWMS
+2025-05-21 18:08:52,619 INFO  [org.jipijapa] (MSC service thread 1-3) JIPIORMV53020253: Second level cache enabled for mywms.ear/project-persistence.jar#myWMS
+2025-05-21 18:08:52,627 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) WFLYWELD0003: Processing weld deployment mywms.ear
+2025-05-21 18:08:52,665 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 78) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'mywms.ear/project-persistence.jar#myWMS'
+2025-05-21 18:08:52,687 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 78) HHH000204: Processing PersistenceUnitInfo [
+	name: myWMS
+	...]
+2025-05-21 18:08:52,768 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-3) HV000001: Hibernate Validator 6.0.22.Final
+2025-05-21 18:08:52,775 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 78) HHH000412: Hibernate Core {5.3.20.Final}
+2025-05-21 18:08:52,777 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 78) HHH000206: hibernate.properties not found
+2025-05-21 18:08:52,922 INFO  [org.jboss.weld.deployer] (MSC service thread 1-5) WFLYWELD0003: Processing weld deployment project-persistence.jar
+2025-05-21 18:08:52,967 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 78) HCANN000001: Hibernate Commons Annotations {5.0.5.Final}
+2025-05-21 18:08:53,023 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) WFLYWELD0003: Processing weld deployment los.mobile-ejb.jar
+2025-05-21 18:08:53,024 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) WFLYWELD0003: Processing weld deployment mywms.as-ejb.jar
+2025-05-21 18:08:53,049 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) WFLYWELD0003: Processing weld deployment project-ejb.jar
+2025-05-21 18:08:53,064 INFO  [org.jboss.weld.deployer] (MSC service thread 1-8) WFLYWELD0003: Processing weld deployment los.mobile-web.war
+2025-05-21 18:08:53,112 INFO  [org.jboss.weld.deployer] (MSC service thread 1-6) WFLYWELD0003: Processing weld deployment wms2-ejb.jar
+2025-05-21 18:08:53,193 INFO  [io.jaegertracing.internal.JaegerTracer] (MSC service thread 1-8) No shutdown hook registered: Please call close() manually on application shutdown.
+2025-05-21 18:08:53,229 INFO  [org.jboss.weld.deployer] (MSC service thread 1-7) WFLYWELD0003: Processing weld deployment los-ejb.jar
+2025-05-21 18:08:53,328 INFO  [org.jboss.weld.Version] (MSC service thread 1-4) WELD-000900: 3.1.5 (Final)
+2025-05-21 18:08:53,354 INFO  [org.jipijapa] (MSC service thread 1-7) JIPIORMV53020253: Second level cache enabled for mywms.ear/project-persistence.jar#myWMS
+2025-05-21 18:08:53,643 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 80) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'mywms.ear/project-persistence.jar#myWMS'
+2025-05-21 18:08:53,689 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 80) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2025-05-21 18:08:53,821 INFO  [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] (ServerService Thread Pool -- 80) HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2025-05-21 18:08:53,827 INFO  [org.hibernate.type.BasicTypeRegistry] (ServerService Thread Pool -- 80) HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@73e91ae8
+2025-05-21 18:08:53,827 WARN  [org.jboss.as.ejb3] (MSC service thread 1-5) WFLYEJB0131: EJB de.linogistix.los.location.report.StorageLocationLabelReportBean should not have a final or static method (getUpArrow)
+2025-05-21 18:08:53,828 WARN  [org.jboss.as.ejb3] (MSC service thread 1-5) WFLYEJB0131: EJB de.linogistix.los.location.report.StorageLocationLabelReportBean should not have a final or static method (getDownArrow)
+2025-05-21 18:08:53,840 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 80) Envers integration enabled? : true
+2025-05-21 18:08:55,490 INFO  [org.hibernate.tuple.PojoInstantiator] (ServerService Thread Pool -- 80) HHH000182: No default (no-argument) constructor for class: de.wms2.mywms.strategy.StorageStrategyArea (class must be instantiated by Interceptor)
+2025-05-21 18:08:56,785 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (ServerService Thread Pool -- 80) HHH000397: Using ASTQueryTranslatorFactory
+2025-05-21 18:08:56,995 WARN  [org.jboss.weld.Bootstrap] (MSC service thread 1-6) WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!
+2025-05-21 18:08:57,058 INFO  [org.jboss.weld.Bootstrap] (Weld Thread Pool -- 3) WELD-000119: Not generating any bean definitions from org.mywms.ejb.BeanLocator because of underlying class loading error: Type javax.jms.QueueConnectionFactory from [Module "deployment.mywms.ear.mywms.as-ejb.jar" from Service Module Loader] not found.  If this is unexpected, enable DEBUG logging to see the full error.
+2025-05-21 18:08:57,726 SEVERE [javax.enterprise.resource.webcontainer.jsf.application.view] (MSC service thread 1-6) Unable to obtain CDI 1.1 utilities for Mojarra
+2025-05-21 18:08:57,736 SEVERE [javax.enterprise.resource.webcontainer.jsf.flow] (MSC service thread 1-6) Unable to obtain CDI 1.1 utilities for Mojarra
+2025-05-21 18:08:58,139 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (ServerService Thread Pool -- 84) Initializing Mojarra 2.3.14.SP02 for context '/los-mobile'
+2025-05-21 18:08:58,743 WARN  [io.undertow.servlet] (ServerService Thread Pool -- 84) UT015020: Path /faces/pages/* is secured for some HTTP methods, however it is not secured for [TRACE, HEAD, CONNECT, OPTIONS]
+2025-05-21 18:08:58,760 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 84) WFLYUT0021: Registered web context: '/los-mobile' for server 'default-server'
+2025-05-21 18:08:58,802 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 45) WFLYSRV0010: Deployed "postgresql-42.2.19.jar" (runtime-name : "postgresql-42.2.19.jar")
+2025-05-21 18:08:58,803 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 45) WFLYSRV0010: Deployed "mywms.ear" (runtime-name : "mywms.ear")
+2025-05-21 18:08:58,842 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2025-05-21 18:08:58,850 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 22.0.1.Final (WildFly Core 14.0.1.Final) started in 12739ms - Started 10096 of 10284 services (376 services are lazy, passive or on-demand)
+2025-05-21 18:08:58,855 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2025-05-21 18:08:58,856 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2025-05-21 18:09:18,901 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.user.query.UserQueryRemote
+2025-05-21 18:09:18,902 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:18,925 INFO  [org.wildfly.naming] (default task-3) WildFly Naming version 1.0.13.Final
+2025-05-21 18:09:18,953 INFO  [org.jboss.ejb.client] (default task-3) JBoss EJB Client version 4.0.37.Final
+2025-05-21 18:09:19,088 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Init
+2025-05-21 18:09:19,088 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.controller.ControllerFacade
+2025-05-21 18:09:19,088 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,099 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.info.InfoBean
+2025-05-21 18:09:19,100 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.info.InfoFacade
+2025-05-21 18:09:19,100 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,113 INFO  [de.linogistix.mobileserver.processes.info.InfoFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:09:19,117 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.goodsreceipt.GoodsReceiptBean
+2025-05-21 18:09:19,118 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:09:19,118 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,141 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.query.LOSAdviceQueryRemote
+2025-05-21 18:09:19,141 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,146 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadTypeServiceRemote
+2025-05-21 18:09:19,146 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,149 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryGoodsReceiptServiceRemote
+2025-05-21 18:09:19,149 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,152 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.LOSGoodsReceiptFacade
+2025-05-21 18:09:19,152 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,156 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadTypeQueryRemote
+2025-05-21 18:09:19,156 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,162 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.storage.StorageBackingBean
+2025-05-21 18:09:19,162 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.query.LOSStorageRequestQueryRemote
+2025-05-21 18:09:19,163 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,168 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.StorageFacade
+2025-05-21 18:09:19,168 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,171 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.LOSStorageLocationQueryRemote
+2025-05-21 18:09:19,172 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,177 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.gr_direct.GRDirectBean
+2025-05-21 18:09:19,177 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:09:19,177 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,179 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryAdviceServiceRemote
+2025-05-21 18:09:19,179 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,182 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadTypeServiceRemote
+2025-05-21 18:09:19,183 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,184 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadServiceRemote
+2025-05-21 18:09:19,185 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,189 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryGoodsReceiptServiceRemote
+2025-05-21 18:09:19,189 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,190 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.LOSGoodsReceiptFacade
+2025-05-21 18:09:19,190 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,192 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryFixedAssignmentServiceRemote
+2025-05-21 18:09:19,192 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,194 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryStorageLocationServiceRemote
+2025-05-21 18:09:19,194 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,197 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryStockServiceRemote
+2025-05-21 18:09:19,197 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,199 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadQueryRemote
+2025-05-21 18:09:19,199 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,203 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryItemDataServiceRemote
+2025-05-21 18:09:19,203 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,205 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadTypeQueryRemote
+2025-05-21 18:09:19,205 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,218 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_UNITLOAD_TYPE=true
+2025-05-21 18:09:19,226 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_UNITLOAD_NO=true
+2025-05-21 18:09:19,235 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_LOT_ALWAYS=false
+2025-05-21 18:09:19,242 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GR_LIMIT_AMOUNT_TO_NOTIFIED=false
+2025-05-21 18:09:19,244 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.gr_direct.GRDirectBean
+2025-05-21 18:09:19,244 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:09:19,244 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,247 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryAdviceServiceRemote
+2025-05-21 18:09:19,247 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,249 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadTypeServiceRemote
+2025-05-21 18:09:19,249 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,251 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadServiceRemote
+2025-05-21 18:09:19,251 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,253 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryGoodsReceiptServiceRemote
+2025-05-21 18:09:19,253 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,255 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.LOSGoodsReceiptFacade
+2025-05-21 18:09:19,255 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,257 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryFixedAssignmentServiceRemote
+2025-05-21 18:09:19,257 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,258 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryStorageLocationServiceRemote
+2025-05-21 18:09:19,258 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,260 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryStockServiceRemote
+2025-05-21 18:09:19,260 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,262 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadQueryRemote
+2025-05-21 18:09:19,262 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,263 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryItemDataServiceRemote
+2025-05-21 18:09:19,264 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,265 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadTypeQueryRemote
+2025-05-21 18:09:19,265 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,274 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_UNITLOAD_TYPE=true
+2025-05-21 18:09:19,281 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_UNITLOAD_NO=true
+2025-05-21 18:09:19,287 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_LOT_ALWAYS=false
+2025-05-21 18:09:19,294 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GR_LIMIT_AMOUNT_TO_NOTIFIED=false
+2025-05-21 18:09:19,294 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.picking.PickingMobileBean
+2025-05-21 18:09:19,296 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.picking.PickingMobileFacade
+2025-05-21 18:09:19,296 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,302 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:09:19,302 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,321 INFO  [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:09:19,323 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) init
+2025-05-21 18:09:19,323 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:09:19,324 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) Navigate: PICK_START, PickingOrder=null
+2025-05-21 18:09:19,324 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.shipping.ShippingBean
+2025-05-21 18:09:19,324 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.LOSGoodsOutFacade
+2025-05-21 18:09:19,324 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,327 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:09:19,327 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,335 INFO  [de.linogistix.mobile.processes.shipping.ShippingBean] (default task-3) SHIPPING_SCAN_DESTINATION=false
+2025-05-21 18:09:19,336 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.replenish.ReplenishMobileBean
+2025-05-21 18:09:19,336 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.replenish.ReplenishMobileFacade
+2025-05-21 18:09:19,336 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,346 INFO  [de.linogistix.mobileserver.processes.replenish.ReplenishMobileFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:09:19,349 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.stocktaking.StockTakingBean
+2025-05-21 18:09:19,349 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadServiceRemote
+2025-05-21 18:09:19,349 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,351 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryItemDataServiceRemote
+2025-05-21 18:09:19,351 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,352 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryStockServiceRemote
+2025-05-21 18:09:19,353 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,354 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryStorageLocationServiceRemote
+2025-05-21 18:09:19,354 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,355 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.query.ClientQueryRemote
+2025-05-21 18:09:19,356 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,360 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.stocktaking.facade.LOSStocktakingFacade
+2025-05-21 18:09:19,360 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,366 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.LOSStorageLocationQueryRemote
+2025-05-21 18:09:19,366 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:19,374 INFO  [de.linogistix.los.stocktaking.facade.LOSStocktakingFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:09:22,427 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.info.InfoFacade
+2025-05-21 18:09:22,428 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:22,434 INFO  [de.linogistix.mobileserver.processes.info.InfoFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:09:22,437 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.user.query.UserQueryRemote
+2025-05-21 18:09:22,437 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:28,399 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.query.LOSStorageRequestQueryRemote
+2025-05-21 18:09:28,399 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:28,401 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.StorageFacade
+2025-05-21 18:09:28,401 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:28,402 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadServiceRemote
+2025-05-21 18:09:28,403 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:28,405 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.user.query.UserQueryRemote
+2025-05-21 18:09:28,405 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:35,587 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.query.LOSStorageRequestQueryRemote
+2025-05-21 18:09:35,587 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:35,590 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.StorageFacade
+2025-05-21 18:09:35,590 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:39,763 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:09:39,763 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:39,765 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryAdviceServiceRemote
+2025-05-21 18:09:39,765 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:39,766 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadTypeServiceRemote
+2025-05-21 18:09:39,767 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:39,768 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadServiceRemote
+2025-05-21 18:09:39,768 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:39,770 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryGoodsReceiptServiceRemote
+2025-05-21 18:09:39,770 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:39,772 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.LOSGoodsReceiptFacade
+2025-05-21 18:09:39,772 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:39,773 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryFixedAssignmentServiceRemote
+2025-05-21 18:09:39,774 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:39,776 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryStorageLocationServiceRemote
+2025-05-21 18:09:39,776 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:39,777 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryStockServiceRemote
+2025-05-21 18:09:39,778 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:39,779 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadQueryRemote
+2025-05-21 18:09:39,779 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:39,780 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryItemDataServiceRemote
+2025-05-21 18:09:39,781 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:39,782 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadTypeQueryRemote
+2025-05-21 18:09:39,782 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:39,789 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_UNITLOAD_TYPE=true
+2025-05-21 18:09:39,797 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_UNITLOAD_NO=true
+2025-05-21 18:09:39,804 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_LOT_ALWAYS=false
+2025-05-21 18:09:39,812 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GR_LIMIT_AMOUNT_TO_NOTIFIED=false
+2025-05-21 18:09:39,814 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.user.query.UserQueryRemote
+2025-05-21 18:09:39,814 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:45,655 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.picking.PickingMobileFacade
+2025-05-21 18:09:45,655 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:45,657 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:09:45,657 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:45,667 INFO  [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:09:45,670 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.user.query.UserQueryRemote
+2025-05-21 18:09:45,670 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:45,749 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) processStartPicking
+2025-05-21 18:09:45,749 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) init
+2025-05-21 18:09:45,749 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:09:45,749 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) resume 
+2025-05-21 18:09:45,749 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:09:45,750 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders 
+2025-05-21 18:09:45,762 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders query = SELECT po FROM PickingOrder po  WHERE po.operator=:user AND po.state >=500 AND po.state<700 ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:09:45,786 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders Found 0 orders in 36 ms
+2025-05-21 18:09:45,788 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) Navigate: PICK_ORDER_SELECT, PickingOrder=null
+2025-05-21 18:09:45,954 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Search picking orders. code=null, usePick=true, useTransport=true
+2025-05-21 18:09:45,958 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders query = SELECT po FROM PickingOrder po WHERE po.state>=300 and po.state<700 AND (      ( po.state=300 )  OR ( exists( select 1 from User user where user=po.operator and user=:user ) ) )  and exists( select 1 from PickingOrderLine pp   WHERE pp.pickingOrder = po and pp.pickingType in (:typeList)) ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:09:46,010 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Found 8 orders in 56 ms
+2025-05-21 18:09:46,069 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:09:46,077 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:09:46,081 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:09:46,081 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:46,082 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.query.LOSAdviceQueryRemote
+2025-05-21 18:09:46,082 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:46,083 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadTypeServiceRemote
+2025-05-21 18:09:46,083 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:46,084 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryGoodsReceiptServiceRemote
+2025-05-21 18:09:46,084 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:46,085 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.LOSGoodsReceiptFacade
+2025-05-21 18:09:46,085 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:46,086 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadTypeQueryRemote
+2025-05-21 18:09:46,086 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:09:56,971 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Search picking orders. code=null, usePick=true, useTransport=true
+2025-05-21 18:09:56,975 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders query = SELECT po FROM PickingOrder po WHERE po.state>=300 and po.state<700 AND (      ( po.state=300 )  OR ( exists( select 1 from User user where user=po.operator and user=:user ) ) )  and exists( select 1 from PickingOrderLine pp   WHERE pp.pickingOrder = po and pp.pickingType in (:typeList)) ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:09:56,984 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Found 8 orders in 13 ms
+2025-05-21 18:09:57,013 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:09:57,019 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:10:13,142 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:10:13,143 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) init
+2025-05-21 18:10:13,143 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:10:13,143 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) Navigate: PICK_MENU, PickingOrder=null
+2025-05-21 18:10:14,762 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) processStartPicking
+2025-05-21 18:10:14,762 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) init
+2025-05-21 18:10:14,762 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:10:14,762 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) resume 
+2025-05-21 18:10:14,762 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:10:14,763 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders 
+2025-05-21 18:10:14,766 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders query = SELECT po FROM PickingOrder po  WHERE po.operator=:user AND po.state >=500 AND po.state<700 ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:10:14,768 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders Found 0 orders in 5 ms
+2025-05-21 18:10:14,769 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) Navigate: PICK_ORDER_SELECT, PickingOrder=null
+2025-05-21 18:10:14,772 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Search picking orders. code=null, usePick=true, useTransport=true
+2025-05-21 18:10:14,775 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders query = SELECT po FROM PickingOrder po WHERE po.state>=300 and po.state<700 AND (      ( po.state=300 )  OR ( exists( select 1 from User user where user=po.operator and user=:user ) ) )  and exists( select 1 from PickingOrderLine pp   WHERE pp.pickingOrder = po and pp.pickingType in (:typeList)) ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:10:14,783 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Found 8 orders in 11 ms
+2025-05-21 18:10:14,814 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:10:14,818 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:10:32,267 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Search picking orders. code=null, usePick=true, useTransport=true
+2025-05-21 18:10:32,270 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders query = SELECT po FROM PickingOrder po WHERE po.state>=300 and po.state<700 AND (      ( po.state=300 )  OR ( exists( select 1 from User user where user=po.operator and user=:user ) ) )  and exists( select 1 from PickingOrderLine pp   WHERE pp.pickingOrder = po and pp.pickingType in (:typeList)) ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:10:32,280 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Found 8 orders in 13 ms
+2025-05-21 18:10:32,309 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:10:32,312 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:15:09,725 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:15:09,725 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) init
+2025-05-21 18:15:09,725 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:15:09,725 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) Navigate: PICK_MENU, PickingOrder=null
+2025-05-21 18:15:18,052 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.LOSGoodsOutFacade
+2025-05-21 18:15:18,052 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:15:18,054 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:15:18,054 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:15:18,060 INFO  [de.linogistix.mobile.processes.shipping.ShippingBean] (default task-3) SHIPPING_SCAN_DESTINATION=false
+2025-05-21 18:15:18,062 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.user.query.UserQueryRemote
+2025-05-21 18:15:18,062 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:15:18,091 WARN  [org.hibernate.orm.deprecation] (default task-3) HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [entity.lines.size]; use collection function syntax instead [size(entity.lines)].
+2025-05-21 18:15:22,914 INFO  [de.linogistix.mobile.processes.shipping.ShippingBean] (default task-3) Selected order: null
+2025-05-21 18:15:30,827 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.replenish.ReplenishMobileFacade
+2025-05-21 18:15:30,828 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:15:30,835 INFO  [de.linogistix.mobileserver.processes.replenish.ReplenishMobileFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:15:30,898 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.user.query.UserQueryRemote
+2025-05-21 18:15:30,898 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:15:40,552 DEBUG [de.linogistix.mobileserver.processes.replenish.ReplenishMobileFacadeBean] (default task-3) getReservedOrder Search reserved order.
+2025-05-21 18:15:40,556 DEBUG [de.linogistix.mobileserver.processes.replenish.ReplenishMobileFacadeBean] (default task-3) getReservedOrder query = SELECT o FROM de.wms2.mywms.transport.TransportOrder o  WHERE o.operator=:user AND o.state >300 AND o.state<700 and o.orderType = 5 ORDER BY o.state DESC, o.prio, o.created ASC
+2025-05-21 18:15:40,651 DEBUG [de.linogistix.mobileserver.processes.replenish.ReplenishMobileFacadeBean] (default task-3) getCalculatedOrders Search replenish orders. code=null
+2025-05-21 18:15:40,654 DEBUG [de.linogistix.mobileserver.processes.replenish.ReplenishMobileFacadeBean] (default task-3) getCalculatedOrders query = SELECT o FROM de.wms2.mywms.transport.TransportOrder o  WHERE o.state=300 and o.orderType = 5 ORDER BY o.prio, o.created ASC
+2025-05-21 18:15:40,658 DEBUG [de.linogistix.mobileserver.processes.replenish.ReplenishMobileFacadeBean] (default task-3) getCalculatedOrders Found 0 orders in 7 ms
+2025-05-21 18:15:40,660 INFO  [de.linogistix.mobile.processes.replenish.ReplenishMobileBean] (default task-3) getOrderList Found 0 orders
+2025-05-21 18:15:40,663 INFO  [de.linogistix.mobile.processes.replenish.ReplenishMobileBean] (default task-3) getOrderList Found 0 orders
+2025-05-21 18:15:43,213 DEBUG [de.linogistix.mobile.processes.replenish.ReplenishMobileBean] (default task-3) init
+2025-05-21 18:15:44,486 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadServiceRemote
+2025-05-21 18:15:44,486 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:15:44,488 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryItemDataServiceRemote
+2025-05-21 18:15:44,488 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:15:44,490 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryStockServiceRemote
+2025-05-21 18:15:44,490 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:15:44,491 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryStorageLocationServiceRemote
+2025-05-21 18:15:44,492 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:15:44,493 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.query.ClientQueryRemote
+2025-05-21 18:15:44,493 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:15:44,494 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.stocktaking.facade.LOSStocktakingFacade
+2025-05-21 18:15:44,494 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:15:44,496 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.LOSStorageLocationQueryRemote
+2025-05-21 18:15:44,496 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:15:44,498 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.user.query.UserQueryRemote
+2025-05-21 18:15:44,498 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:15:44,510 INFO  [de.linogistix.mobile.processes.stocktaking.StockTakingBean] (default task-3) Search next location...
+2025-05-21 18:15:44,519 INFO  [de.linogistix.los.stocktaking.customization.LOSManageStocktakingServiceBean] (default task-3) getNextLocation: Query=SELECT so.locationName FROM LOSStocktakingOrder so, StorageLocation sl WHERE sl.name=so.locationName  AND so.state in (:stateCreated,:stateFree)  AND sl.client in (:cl1,:cl2)  ORDER BY so.locationName 
+2025-05-21 18:15:44,524 INFO  [de.linogistix.los.stocktaking.customization.LOSManageStocktakingServiceBean] (default task-3) Nothing found
+2025-05-21 18:15:53,591 INFO  [de.linogistix.mobile.processes.stocktaking.StockTakingBean] (default task-3) Search next location...
+2025-05-21 18:15:53,598 INFO  [de.linogistix.los.stocktaking.customization.LOSManageStocktakingServiceBean] (default task-3) getNextLocation: Query=SELECT so.locationName FROM LOSStocktakingOrder so, StorageLocation sl WHERE sl.name=so.locationName  AND so.state in (:stateCreated,:stateFree)  AND sl.client in (:cl1,:cl2)  ORDER BY so.locationName 
+2025-05-21 18:15:53,600 INFO  [de.linogistix.los.stocktaking.customization.LOSManageStocktakingServiceBean] (default task-3) Nothing found
+2025-05-21 18:16:05,629 INFO  [de.linogistix.mobile.processes.stocktaking.StockTakingBean] (default task-3) Search next location...
+2025-05-21 18:16:05,637 INFO  [de.linogistix.los.stocktaking.customization.LOSManageStocktakingServiceBean] (default task-3) getNextLocation: Query=SELECT so.locationName FROM LOSStocktakingOrder so, StorageLocation sl WHERE sl.name=so.locationName  AND so.state in (:stateCreated,:stateFree)  AND sl.client in (:cl1,:cl2)  ORDER BY so.locationName 
+2025-05-21 18:16:05,638 INFO  [de.linogistix.los.stocktaking.customization.LOSManageStocktakingServiceBean] (default task-3) Nothing found
+2025-05-21 18:16:18,763 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) processStartPicking
+2025-05-21 18:16:18,763 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) init
+2025-05-21 18:16:18,764 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:16:18,764 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) resume 
+2025-05-21 18:16:18,764 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:16:18,764 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders 
+2025-05-21 18:16:18,768 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders query = SELECT po FROM PickingOrder po  WHERE po.operator=:user AND po.state >=500 AND po.state<700 ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:16:18,769 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders Found 0 orders in 5 ms
+2025-05-21 18:16:18,771 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) Navigate: PICK_ORDER_SELECT, PickingOrder=null
+2025-05-21 18:16:18,772 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Search picking orders. code=null, usePick=true, useTransport=true
+2025-05-21 18:16:18,775 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders query = SELECT po FROM PickingOrder po WHERE po.state>=300 and po.state<700 AND (      ( po.state=300 )  OR ( exists( select 1 from User user where user=po.operator and user=:user ) ) )  and exists( select 1 from PickingOrderLine pp   WHERE pp.pickingOrder = po and pp.pickingType in (:typeList)) ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:16:18,782 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Found 8 orders in 10 ms
+2025-05-21 18:16:18,809 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:16:18,813 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:16:26,868 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:16:26,868 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) init
+2025-05-21 18:16:26,868 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:16:26,868 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) Navigate: PICK_MENU, PickingOrder=null
+2025-05-21 18:16:31,051 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) processStartPicking
+2025-05-21 18:16:31,051 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) init
+2025-05-21 18:16:31,051 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:16:31,051 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) resume 
+2025-05-21 18:16:31,051 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:16:31,052 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders 
+2025-05-21 18:16:31,054 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders query = SELECT po FROM PickingOrder po  WHERE po.operator=:user AND po.state >=500 AND po.state<700 ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:16:31,056 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders Found 0 orders in 4 ms
+2025-05-21 18:16:31,058 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) Navigate: PICK_ORDER_SELECT, PickingOrder=null
+2025-05-21 18:16:31,060 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Search picking orders. code=null, usePick=true, useTransport=true
+2025-05-21 18:16:31,063 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders query = SELECT po FROM PickingOrder po WHERE po.state>=300 and po.state<700 AND (      ( po.state=300 )  OR ( exists( select 1 from User user where user=po.operator and user=:user ) ) )  and exists( select 1 from PickingOrderLine pp   WHERE pp.pickingOrder = po and pp.pickingType in (:typeList)) ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:16:31,069 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Found 8 orders in 9 ms
+2025-05-21 18:16:31,093 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:16:31,095 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:16:35,325 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Search picking orders. code=null, usePick=true, useTransport=true
+2025-05-21 18:16:35,328 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders query = SELECT po FROM PickingOrder po WHERE po.state>=300 and po.state<700 AND (      ( po.state=300 )  OR ( exists( select 1 from User user where user=po.operator and user=:user ) ) )  and exists( select 1 from PickingOrderLine pp   WHERE pp.pickingOrder = po and pp.pickingType in (:typeList)) ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:16:35,334 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Found 8 orders in 9 ms
+2025-05-21 18:16:35,360 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:16:35,362 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:16:39,038 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:16:39,038 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) init
+2025-05-21 18:16:39,038 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:16:39,038 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) Navigate: PICK_MENU, PickingOrder=null
+2025-05-21 18:16:42,158 INFO  [de.linogistix.mobile.processes.stocktaking.StockTakingBean] (default task-3) Search next location...
+2025-05-21 18:16:42,165 INFO  [de.linogistix.los.stocktaking.customization.LOSManageStocktakingServiceBean] (default task-3) getNextLocation: Query=SELECT so.locationName FROM LOSStocktakingOrder so, StorageLocation sl WHERE sl.name=so.locationName  AND so.state in (:stateCreated,:stateFree)  AND sl.client in (:cl1,:cl2)  ORDER BY so.locationName 
+2025-05-21 18:16:42,167 INFO  [de.linogistix.los.stocktaking.customization.LOSManageStocktakingServiceBean] (default task-3) Nothing found
+2025-05-21 18:16:47,891 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) processStartPicking
+2025-05-21 18:16:47,891 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) init
+2025-05-21 18:16:47,891 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:16:47,891 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) resume 
+2025-05-21 18:16:47,891 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:16:47,892 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders 
+2025-05-21 18:16:47,894 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders query = SELECT po FROM PickingOrder po  WHERE po.operator=:user AND po.state >=500 AND po.state<700 ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:16:47,896 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders Found 0 orders in 4 ms
+2025-05-21 18:16:47,897 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) Navigate: PICK_ORDER_SELECT, PickingOrder=null
+2025-05-21 18:16:47,900 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Search picking orders. code=null, usePick=true, useTransport=true
+2025-05-21 18:16:47,902 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders query = SELECT po FROM PickingOrder po WHERE po.state>=300 and po.state<700 AND (      ( po.state=300 )  OR ( exists( select 1 from User user where user=po.operator and user=:user ) ) )  and exists( select 1 from PickingOrderLine pp   WHERE pp.pickingOrder = po and pp.pickingType in (:typeList)) ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:16:47,908 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Found 8 orders in 8 ms
+2025-05-21 18:16:47,930 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:16:47,933 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:18:47,772 INFO  [org.jboss.as.repository] (ServerService Thread Pool -- 41) WFLYDR0009: Content /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/data/content/54/5d091affcadb9055fe2aeac32d27edc2991339 is obsolete and will be removed
+2025-05-21 18:18:47,799 INFO  [org.jboss.as.repository] (ServerService Thread Pool -- 41) WFLYDR0002: Content removed from location /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/data/content/54/5d091affcadb9055fe2aeac32d27edc2991339/content
+2025-05-21 18:23:10,309 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 1) WFLYDR0001: Content added at location /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/data/content/3b/a0205d1bcfa24451e331d96e91dccd0e0c1c62/content
+2025-05-21 18:23:10,372 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 115) WFLYUT0022: Unregistered web context: '/los-mobile' from server 'default-server'
+2025-05-21 18:23:10,454 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 121) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'mywms.ear/project-persistence.jar#myWMS'
+2025-05-21 18:23:10,455 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 121) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@3d3bb0b4
+2025-05-21 18:23:10,519 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 121) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'mywms.ear/project-persistence.jar#myWMS'
+2025-05-21 18:23:10,534 INFO  [org.infinispan.manager.DefaultCacheManager] (ServerService Thread Pool -- 121) Stopping cache manager null on null
+2025-05-21 18:23:10,537 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0208: Stopped subdeployment (runtime-name: los.mobile-ejb.jar) in 212ms
+2025-05-21 18:23:10,537 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0208: Stopped subdeployment (runtime-name: mywms.as-ejb.jar) in 212ms
+2025-05-21 18:23:10,537 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0208: Stopped subdeployment (runtime-name: project-persistence.jar) in 213ms
+2025-05-21 18:23:10,538 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0208: Stopped subdeployment (runtime-name: project-ejb.jar) in 213ms
+2025-05-21 18:23:10,538 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0208: Stopped subdeployment (runtime-name: los-ejb.jar) in 214ms
+2025-05-21 18:23:10,538 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0208: Stopped subdeployment (runtime-name: wms2-ejb.jar) in 214ms
+2025-05-21 18:23:10,549 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0208: Stopped subdeployment (runtime-name: los.mobile-web.war) in 225ms
+2025-05-21 18:23:10,564 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0028: Stopped deployment mywms.ear (runtime-name: mywms.ear) in 240ms
+2025-05-21 18:23:10,565 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0027: Starting deployment of "mywms.ear" (runtime-name: "mywms.ear")
+2025-05-21 18:23:11,643 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0207: Starting subdeployment (runtime-name: "los.mobile-web.war")
+2025-05-21 18:23:11,643 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0207: Starting subdeployment (runtime-name: "los.mobile-ejb.jar")
+2025-05-21 18:23:11,643 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0207: Starting subdeployment (runtime-name: "mywms.as-ejb.jar")
+2025-05-21 18:23:11,643 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0207: Starting subdeployment (runtime-name: "los-ejb.jar")
+2025-05-21 18:23:11,643 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0207: Starting subdeployment (runtime-name: "wms2-ejb.jar")
+2025-05-21 18:23:11,643 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0207: Starting subdeployment (runtime-name: "project-persistence.jar")
+2025-05-21 18:23:11,643 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0207: Starting subdeployment (runtime-name: "project-ejb.jar")
+2025-05-21 18:23:11,770 INFO  [org.jboss.as.jpa] (MSC service thread 1-5) WFLYJPA0002: Read persistence.xml for myWMS
+2025-05-21 18:23:11,931 INFO  [org.jipijapa] (MSC service thread 1-4) JIPIORMV53020253: Second level cache enabled for mywms.ear/project-persistence.jar#myWMS
+2025-05-21 18:23:11,933 INFO  [org.jboss.weld.deployer] (MSC service thread 1-6) WFLYWELD0003: Processing weld deployment mywms.ear
+2025-05-21 18:23:11,951 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 121) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'mywms.ear/project-persistence.jar#myWMS'
+2025-05-21 18:23:11,952 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 121) HHH000204: Processing PersistenceUnitInfo [
+	name: myWMS
+	...]
+2025-05-21 18:23:11,977 INFO  [org.jboss.weld.deployer] (MSC service thread 1-5) WFLYWELD0003: Processing weld deployment project-persistence.jar
+2025-05-21 18:23:12,031 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) WFLYWELD0003: Processing weld deployment los.mobile-ejb.jar
+2025-05-21 18:23:12,055 INFO  [org.jboss.weld.deployer] (MSC service thread 1-7) WFLYWELD0003: Processing weld deployment mywms.as-ejb.jar
+2025-05-21 18:23:12,066 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) WFLYWELD0003: Processing weld deployment los.mobile-web.war
+2025-05-21 18:23:12,081 INFO  [org.jboss.weld.deployer] (MSC service thread 1-6) WFLYWELD0003: Processing weld deployment project-ejb.jar
+2025-05-21 18:23:12,117 INFO  [io.jaegertracing.internal.JaegerTracer] (MSC service thread 1-1) No shutdown hook registered: Please call close() manually on application shutdown.
+2025-05-21 18:23:12,132 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) WFLYWELD0003: Processing weld deployment wms2-ejb.jar
+2025-05-21 18:23:12,215 INFO  [org.jboss.weld.deployer] (MSC service thread 1-8) WFLYWELD0003: Processing weld deployment los-ejb.jar
+2025-05-21 18:23:12,255 INFO  [org.jipijapa] (MSC service thread 1-6) JIPIORMV53020253: Second level cache enabled for mywms.ear/project-persistence.jar#myWMS
+2025-05-21 18:23:12,283 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 121) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'mywms.ear/project-persistence.jar#myWMS'
+2025-05-21 18:23:12,283 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 121) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2025-05-21 18:23:12,327 INFO  [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] (ServerService Thread Pool -- 121) HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2025-05-21 18:23:12,327 INFO  [org.hibernate.type.BasicTypeRegistry] (ServerService Thread Pool -- 121) HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@73e91ae8
+2025-05-21 18:23:12,329 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 121) Envers integration enabled? : true
+2025-05-21 18:23:12,600 WARN  [org.jboss.as.ejb3] (MSC service thread 1-1) WFLYEJB0131: EJB de.linogistix.los.location.report.StorageLocationLabelReportBean should not have a final or static method (getUpArrow)
+2025-05-21 18:23:12,600 WARN  [org.jboss.as.ejb3] (MSC service thread 1-1) WFLYEJB0131: EJB de.linogistix.los.location.report.StorageLocationLabelReportBean should not have a final or static method (getDownArrow)
+2025-05-21 18:23:12,984 INFO  [org.hibernate.tuple.PojoInstantiator] (ServerService Thread Pool -- 121) HHH000182: No default (no-argument) constructor for class: de.wms2.mywms.strategy.StorageStrategyArea (class must be instantiated by Interceptor)
+2025-05-21 18:23:13,978 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (ServerService Thread Pool -- 121) HHH000397: Using ASTQueryTranslatorFactory
+2025-05-21 18:23:14,018 WARN  [org.jboss.weld.Bootstrap] (MSC service thread 1-1) WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!
+2025-05-21 18:23:14,023 INFO  [org.jboss.weld.Bootstrap] (Weld Thread Pool -- 6) WELD-000119: Not generating any bean definitions from org.mywms.ejb.BeanLocator because of underlying class loading error: Type javax.jms.QueueConnectionFactory from [Module "deployment.mywms.ear.mywms.as-ejb.jar" from Service Module Loader] not found.  If this is unexpected, enable DEBUG logging to see the full error.
+2025-05-21 18:23:14,335 SEVERE [javax.enterprise.resource.webcontainer.jsf.application.view] (MSC service thread 1-1) Unable to obtain CDI 1.1 utilities for Mojarra
+2025-05-21 18:23:14,336 SEVERE [javax.enterprise.resource.webcontainer.jsf.flow] (MSC service thread 1-1) Unable to obtain CDI 1.1 utilities for Mojarra
+2025-05-21 18:23:14,499 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (ServerService Thread Pool -- 146) Initializing Mojarra 2.3.14.SP02 for context '/los-mobile'
+2025-05-21 18:23:14,735 WARN  [io.undertow.servlet] (ServerService Thread Pool -- 146) UT015020: Path /faces/pages/* is secured for some HTTP methods, however it is not secured for [TRACE, HEAD, CONNECT, OPTIONS]
+2025-05-21 18:23:14,736 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 146) WFLYUT0021: Registered web context: '/los-mobile' for server 'default-server'
+2025-05-21 18:23:14,892 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) WFLYSRV0016: Replaced deployment "mywms.ear" with deployment "mywms.ear"
+2025-05-21 18:23:14,897 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 1) WFLYDR0002: Content removed from location /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/data/content/45/c1c2b41d2efb7e0f211f4da98171a1ec84e606/content
+2025-05-21 18:23:27,504 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.user.query.UserQueryRemote
+2025-05-21 18:23:27,504 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,533 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Init
+2025-05-21 18:23:27,534 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.controller.ControllerFacade
+2025-05-21 18:23:27,534 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,545 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.info.InfoBean
+2025-05-21 18:23:27,545 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.info.InfoFacade
+2025-05-21 18:23:27,545 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,557 INFO  [de.linogistix.mobileserver.processes.info.InfoFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:23:27,560 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.goodsreceipt.GoodsReceiptBean
+2025-05-21 18:23:27,560 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:23:27,560 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,576 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.query.LOSAdviceQueryRemote
+2025-05-21 18:23:27,576 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,580 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadTypeServiceRemote
+2025-05-21 18:23:27,581 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,583 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryGoodsReceiptServiceRemote
+2025-05-21 18:23:27,583 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,586 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.LOSGoodsReceiptFacade
+2025-05-21 18:23:27,586 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,591 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadTypeQueryRemote
+2025-05-21 18:23:27,591 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,597 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.storage.StorageBackingBean
+2025-05-21 18:23:27,597 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.query.LOSStorageRequestQueryRemote
+2025-05-21 18:23:27,597 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,601 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.StorageFacade
+2025-05-21 18:23:27,601 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,604 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.LOSStorageLocationQueryRemote
+2025-05-21 18:23:27,604 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,610 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.gr_direct.GRDirectBean
+2025-05-21 18:23:27,610 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:23:27,610 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,612 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryAdviceServiceRemote
+2025-05-21 18:23:27,612 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,614 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadTypeServiceRemote
+2025-05-21 18:23:27,615 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,616 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadServiceRemote
+2025-05-21 18:23:27,616 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,618 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryGoodsReceiptServiceRemote
+2025-05-21 18:23:27,618 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,620 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.LOSGoodsReceiptFacade
+2025-05-21 18:23:27,620 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,621 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryFixedAssignmentServiceRemote
+2025-05-21 18:23:27,622 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,624 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryStorageLocationServiceRemote
+2025-05-21 18:23:27,624 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,627 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryStockServiceRemote
+2025-05-21 18:23:27,627 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,629 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadQueryRemote
+2025-05-21 18:23:27,629 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,633 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryItemDataServiceRemote
+2025-05-21 18:23:27,633 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,635 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadTypeQueryRemote
+2025-05-21 18:23:27,635 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,646 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_UNITLOAD_TYPE=true
+2025-05-21 18:23:27,651 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_UNITLOAD_NO=true
+2025-05-21 18:23:27,658 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_LOT_ALWAYS=false
+2025-05-21 18:23:27,664 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GR_LIMIT_AMOUNT_TO_NOTIFIED=false
+2025-05-21 18:23:27,665 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.gr_direct.GRDirectBean
+2025-05-21 18:23:27,665 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:23:27,665 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,667 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryAdviceServiceRemote
+2025-05-21 18:23:27,667 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,669 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadTypeServiceRemote
+2025-05-21 18:23:27,669 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,670 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadServiceRemote
+2025-05-21 18:23:27,670 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,671 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryGoodsReceiptServiceRemote
+2025-05-21 18:23:27,672 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,674 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.LOSGoodsReceiptFacade
+2025-05-21 18:23:27,674 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,675 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryFixedAssignmentServiceRemote
+2025-05-21 18:23:27,676 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,677 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryStorageLocationServiceRemote
+2025-05-21 18:23:27,677 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,679 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryStockServiceRemote
+2025-05-21 18:23:27,679 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,680 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadQueryRemote
+2025-05-21 18:23:27,680 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,681 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryItemDataServiceRemote
+2025-05-21 18:23:27,681 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,682 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadTypeQueryRemote
+2025-05-21 18:23:27,682 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,689 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_UNITLOAD_TYPE=true
+2025-05-21 18:23:27,694 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_UNITLOAD_NO=true
+2025-05-21 18:23:27,699 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_LOT_ALWAYS=false
+2025-05-21 18:23:27,704 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GR_LIMIT_AMOUNT_TO_NOTIFIED=false
+2025-05-21 18:23:27,704 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.picking.PickingMobileBean
+2025-05-21 18:23:27,705 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.picking.PickingMobileFacade
+2025-05-21 18:23:27,705 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,710 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:23:27,710 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,727 INFO  [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:23:27,728 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) init
+2025-05-21 18:23:27,728 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:23:27,729 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) Navigate: PICK_START, PickingOrder=null
+2025-05-21 18:23:27,729 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.shipping.ShippingBean
+2025-05-21 18:23:27,729 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.LOSGoodsOutFacade
+2025-05-21 18:23:27,729 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,733 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:23:27,733 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,740 INFO  [de.linogistix.mobile.processes.shipping.ShippingBean] (default task-3) SHIPPING_SCAN_DESTINATION=false
+2025-05-21 18:23:27,741 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.replenish.ReplenishMobileBean
+2025-05-21 18:23:27,741 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.replenish.ReplenishMobileFacade
+2025-05-21 18:23:27,741 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,751 INFO  [de.linogistix.mobileserver.processes.replenish.ReplenishMobileFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:23:27,754 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.stocktaking.StockTakingBean
+2025-05-21 18:23:27,755 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadServiceRemote
+2025-05-21 18:23:27,755 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,757 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryItemDataServiceRemote
+2025-05-21 18:23:27,757 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,758 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryStockServiceRemote
+2025-05-21 18:23:27,758 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,760 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryStorageLocationServiceRemote
+2025-05-21 18:23:27,760 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,761 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.query.ClientQueryRemote
+2025-05-21 18:23:27,761 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,765 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.stocktaking.facade.LOSStocktakingFacade
+2025-05-21 18:23:27,766 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,769 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.LOSStorageLocationQueryRemote
+2025-05-21 18:23:27,769 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:27,777 INFO  [de.linogistix.los.stocktaking.facade.LOSStocktakingFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:23:29,999 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.picking.PickingMobileFacade
+2025-05-21 18:23:29,999 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:30,000 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:23:30,000 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:30,010 INFO  [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:23:30,013 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.user.query.UserQueryRemote
+2025-05-21 18:23:30,013 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:23:30,166 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) processStartPicking
+2025-05-21 18:23:30,166 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) init
+2025-05-21 18:23:30,166 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:23:30,166 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) resume 
+2025-05-21 18:23:30,166 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:23:30,167 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders 
+2025-05-21 18:23:30,172 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders query = SELECT po FROM PickingOrder po  WHERE po.operator=:user AND po.state >=500 AND po.state<700 ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:23:30,177 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders Found 0 orders in 10 ms
+2025-05-21 18:23:30,178 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) Navigate: PICK_ORDER_SELECT, PickingOrder=null
+2025-05-21 18:23:30,269 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Search picking orders. code=null, usePick=true, useTransport=true
+2025-05-21 18:23:30,272 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders query = SELECT po FROM PickingOrder po WHERE po.state>=300 and po.state<700 AND (      ( po.state=300 )  OR ( exists( select 1 from User user where user=po.operator and user=:user ) ) )  and exists( select 1 from PickingOrderLine pp   WHERE pp.pickingOrder = po and pp.pickingType in (:typeList)) ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:23:30,287 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Found 8 orders in 18 ms
+2025-05-21 18:23:30,318 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:23:30,324 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:23:37,707 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) loadOrder id=6202
+2025-05-21 18:23:37,737 DEBUG [de.linogistix.los.inventory.businessservice.LOSOrderBusinessBean] (default task-3) reservePickingOrder order=P000002, ignoreReservationGap=false
+2025-05-21 18:23:37,737 DEBUG [de.linogistix.los.inventory.businessservice.LOSOrderBusinessBean] (default task-3) Fire PickingOrderStateChangeEvent. entity=P000002, state=400, oldState=300
+2025-05-21 18:23:37,891 INFO  [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) readUnitLoad No unit load defined for order. id=6202
+2025-05-21 18:23:37,892 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) Navigate: PICK_ORDER_INFO, PickingOrder=P000002
+2025-05-21 18:25:15,215 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 1) WFLYDR0001: Content added at location /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/data/content/4b/53ece2b22b5322bca2a117990c206948267731/content
+2025-05-21 18:25:15,242 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 150) WFLYUT0022: Unregistered web context: '/los-mobile' from server 'default-server'
+2025-05-21 18:25:15,291 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 164) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'mywms.ear/project-persistence.jar#myWMS'
+2025-05-21 18:25:15,293 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 164) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@2e8b41f0
+2025-05-21 18:25:15,324 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 164) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'mywms.ear/project-persistence.jar#myWMS'
+2025-05-21 18:25:15,335 INFO  [org.infinispan.manager.DefaultCacheManager] (ServerService Thread Pool -- 164) Stopping cache manager null on null
+2025-05-21 18:25:15,341 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0208: Stopped subdeployment (runtime-name: wms2-ejb.jar) in 121ms
+2025-05-21 18:25:15,341 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0208: Stopped subdeployment (runtime-name: mywms.as-ejb.jar) in 121ms
+2025-05-21 18:25:15,341 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0208: Stopped subdeployment (runtime-name: los-ejb.jar) in 121ms
+2025-05-21 18:25:15,341 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0208: Stopped subdeployment (runtime-name: project-persistence.jar) in 121ms
+2025-05-21 18:25:15,341 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0208: Stopped subdeployment (runtime-name: project-ejb.jar) in 121ms
+2025-05-21 18:25:15,341 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0208: Stopped subdeployment (runtime-name: los.mobile-ejb.jar) in 121ms
+2025-05-21 18:25:15,352 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0208: Stopped subdeployment (runtime-name: los.mobile-web.war) in 132ms
+2025-05-21 18:25:15,370 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0028: Stopped deployment mywms.ear (runtime-name: mywms.ear) in 151ms
+2025-05-21 18:25:15,371 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0027: Starting deployment of "mywms.ear" (runtime-name: "mywms.ear")
+2025-05-21 18:25:16,372 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0207: Starting subdeployment (runtime-name: "los.mobile-ejb.jar")
+2025-05-21 18:25:16,372 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0207: Starting subdeployment (runtime-name: "los-ejb.jar")
+2025-05-21 18:25:16,372 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0207: Starting subdeployment (runtime-name: "mywms.as-ejb.jar")
+2025-05-21 18:25:16,372 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0207: Starting subdeployment (runtime-name: "project-ejb.jar")
+2025-05-21 18:25:16,372 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0207: Starting subdeployment (runtime-name: "los.mobile-web.war")
+2025-05-21 18:25:16,372 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0207: Starting subdeployment (runtime-name: "project-persistence.jar")
+2025-05-21 18:25:16,372 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0207: Starting subdeployment (runtime-name: "wms2-ejb.jar")
+2025-05-21 18:25:16,448 INFO  [org.jboss.as.jpa] (MSC service thread 1-6) WFLYJPA0002: Read persistence.xml for myWMS
+2025-05-21 18:25:16,554 INFO  [org.jipijapa] (MSC service thread 1-5) JIPIORMV53020253: Second level cache enabled for mywms.ear/project-persistence.jar#myWMS
+2025-05-21 18:25:16,556 INFO  [org.jboss.weld.deployer] (MSC service thread 1-5) WFLYWELD0003: Processing weld deployment mywms.ear
+2025-05-21 18:25:16,572 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 164) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'mywms.ear/project-persistence.jar#myWMS'
+2025-05-21 18:25:16,573 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 164) HHH000204: Processing PersistenceUnitInfo [
+	name: myWMS
+	...]
+2025-05-21 18:25:16,594 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) WFLYWELD0003: Processing weld deployment project-persistence.jar
+2025-05-21 18:25:16,652 INFO  [org.jboss.weld.deployer] (MSC service thread 1-7) WFLYWELD0003: Processing weld deployment los.mobile-ejb.jar
+2025-05-21 18:25:16,658 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) WFLYWELD0003: Processing weld deployment project-ejb.jar
+2025-05-21 18:25:16,667 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) WFLYWELD0003: Processing weld deployment mywms.as-ejb.jar
+2025-05-21 18:25:16,673 INFO  [org.jboss.weld.deployer] (MSC service thread 1-8) WFLYWELD0003: Processing weld deployment los.mobile-web.war
+2025-05-21 18:25:16,717 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) WFLYWELD0003: Processing weld deployment wms2-ejb.jar
+2025-05-21 18:25:16,724 INFO  [io.jaegertracing.internal.JaegerTracer] (MSC service thread 1-8) No shutdown hook registered: Please call close() manually on application shutdown.
+2025-05-21 18:25:16,807 INFO  [org.jboss.weld.deployer] (MSC service thread 1-6) WFLYWELD0003: Processing weld deployment los-ejb.jar
+2025-05-21 18:25:16,868 INFO  [org.jipijapa] (MSC service thread 1-8) JIPIORMV53020253: Second level cache enabled for mywms.ear/project-persistence.jar#myWMS
+2025-05-21 18:25:16,893 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 164) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'mywms.ear/project-persistence.jar#myWMS'
+2025-05-21 18:25:16,898 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 164) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2025-05-21 18:25:16,964 INFO  [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] (ServerService Thread Pool -- 164) HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2025-05-21 18:25:16,965 INFO  [org.hibernate.type.BasicTypeRegistry] (ServerService Thread Pool -- 164) HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@73e91ae8
+2025-05-21 18:25:16,966 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 164) Envers integration enabled? : true
+2025-05-21 18:25:17,250 WARN  [org.jboss.as.ejb3] (MSC service thread 1-6) WFLYEJB0131: EJB de.linogistix.los.location.report.StorageLocationLabelReportBean should not have a final or static method (getUpArrow)
+2025-05-21 18:25:17,250 WARN  [org.jboss.as.ejb3] (MSC service thread 1-6) WFLYEJB0131: EJB de.linogistix.los.location.report.StorageLocationLabelReportBean should not have a final or static method (getDownArrow)
+2025-05-21 18:25:17,585 INFO  [org.hibernate.tuple.PojoInstantiator] (ServerService Thread Pool -- 164) HHH000182: No default (no-argument) constructor for class: de.wms2.mywms.strategy.StorageStrategyArea (class must be instantiated by Interceptor)
+2025-05-21 18:25:18,486 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (ServerService Thread Pool -- 164) HHH000397: Using ASTQueryTranslatorFactory
+2025-05-21 18:25:18,532 WARN  [org.jboss.weld.Bootstrap] (MSC service thread 1-4) WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!
+2025-05-21 18:25:18,566 INFO  [org.jboss.weld.Bootstrap] (Weld Thread Pool -- 8) WELD-000119: Not generating any bean definitions from org.mywms.ejb.BeanLocator because of underlying class loading error: Type javax.jms.QueueConnectionFactory from [Module "deployment.mywms.ear.mywms.as-ejb.jar" from Service Module Loader] not found.  If this is unexpected, enable DEBUG logging to see the full error.
+2025-05-21 18:25:18,796 SEVERE [javax.enterprise.resource.webcontainer.jsf.application.view] (MSC service thread 1-4) Unable to obtain CDI 1.1 utilities for Mojarra
+2025-05-21 18:25:18,796 SEVERE [javax.enterprise.resource.webcontainer.jsf.flow] (MSC service thread 1-4) Unable to obtain CDI 1.1 utilities for Mojarra
+2025-05-21 18:25:18,947 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (ServerService Thread Pool -- 164) Initializing Mojarra 2.3.14.SP02 for context '/los-mobile'
+2025-05-21 18:25:19,156 WARN  [io.undertow.servlet] (ServerService Thread Pool -- 164) UT015020: Path /faces/pages/* is secured for some HTTP methods, however it is not secured for [TRACE, HEAD, CONNECT, OPTIONS]
+2025-05-21 18:25:19,157 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 164) WFLYUT0021: Registered web context: '/los-mobile' for server 'default-server'
+2025-05-21 18:25:19,176 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) WFLYSRV0016: Replaced deployment "mywms.ear" with deployment "mywms.ear"
+2025-05-21 18:25:19,181 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 1) WFLYDR0002: Content removed from location /home/goran/Radni/gitMyWMS/wildfly-22.0.1.Final/standalone/data/content/3b/a0205d1bcfa24451e331d96e91dccd0e0c1c62/content
+2025-05-21 18:25:32,924 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.user.query.UserQueryRemote
+2025-05-21 18:25:32,924 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:32,952 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Init
+2025-05-21 18:25:32,952 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.controller.ControllerFacade
+2025-05-21 18:25:32,952 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:32,958 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.info.InfoBean
+2025-05-21 18:25:32,959 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.info.InfoFacade
+2025-05-21 18:25:32,959 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:32,969 INFO  [de.linogistix.mobileserver.processes.info.InfoFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:25:32,971 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.goodsreceipt.GoodsReceiptBean
+2025-05-21 18:25:32,971 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:25:32,971 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:32,977 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.query.LOSAdviceQueryRemote
+2025-05-21 18:25:32,977 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:32,981 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadTypeServiceRemote
+2025-05-21 18:25:32,981 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:32,983 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryGoodsReceiptServiceRemote
+2025-05-21 18:25:32,983 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:32,985 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.LOSGoodsReceiptFacade
+2025-05-21 18:25:32,985 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:32,988 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadTypeQueryRemote
+2025-05-21 18:25:32,988 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:32,993 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.storage.StorageBackingBean
+2025-05-21 18:25:32,993 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.query.LOSStorageRequestQueryRemote
+2025-05-21 18:25:32,993 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:32,997 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.StorageFacade
+2025-05-21 18:25:32,997 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,000 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.LOSStorageLocationQueryRemote
+2025-05-21 18:25:33,000 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,004 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.gr_direct.GRDirectBean
+2025-05-21 18:25:33,004 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:25:33,004 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,006 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryAdviceServiceRemote
+2025-05-21 18:25:33,006 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,008 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadTypeServiceRemote
+2025-05-21 18:25:33,008 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,009 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadServiceRemote
+2025-05-21 18:25:33,009 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,011 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryGoodsReceiptServiceRemote
+2025-05-21 18:25:33,011 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,012 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.LOSGoodsReceiptFacade
+2025-05-21 18:25:33,012 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,013 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryFixedAssignmentServiceRemote
+2025-05-21 18:25:33,014 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,016 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryStorageLocationServiceRemote
+2025-05-21 18:25:33,016 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,018 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryStockServiceRemote
+2025-05-21 18:25:33,018 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,020 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadQueryRemote
+2025-05-21 18:25:33,020 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,024 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryItemDataServiceRemote
+2025-05-21 18:25:33,024 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,026 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadTypeQueryRemote
+2025-05-21 18:25:33,026 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,038 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_UNITLOAD_TYPE=true
+2025-05-21 18:25:33,043 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_UNITLOAD_NO=true
+2025-05-21 18:25:33,051 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_LOT_ALWAYS=false
+2025-05-21 18:25:33,057 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GR_LIMIT_AMOUNT_TO_NOTIFIED=false
+2025-05-21 18:25:33,058 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.gr_direct.GRDirectBean
+2025-05-21 18:25:33,058 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:25:33,058 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,060 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryAdviceServiceRemote
+2025-05-21 18:25:33,060 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,062 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadTypeServiceRemote
+2025-05-21 18:25:33,062 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,064 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadServiceRemote
+2025-05-21 18:25:33,064 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,067 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryGoodsReceiptServiceRemote
+2025-05-21 18:25:33,067 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,068 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.LOSGoodsReceiptFacade
+2025-05-21 18:25:33,068 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,070 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryFixedAssignmentServiceRemote
+2025-05-21 18:25:33,070 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,071 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryStorageLocationServiceRemote
+2025-05-21 18:25:33,071 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,072 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryStockServiceRemote
+2025-05-21 18:25:33,072 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,074 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadQueryRemote
+2025-05-21 18:25:33,074 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,075 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryItemDataServiceRemote
+2025-05-21 18:25:33,075 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,076 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.UnitLoadTypeQueryRemote
+2025-05-21 18:25:33,076 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,084 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_UNITLOAD_TYPE=true
+2025-05-21 18:25:33,089 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_UNITLOAD_NO=true
+2025-05-21 18:25:33,094 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GRD_COLLECT_LOT_ALWAYS=false
+2025-05-21 18:25:33,101 INFO  [de.linogistix.mobile.processes.gr_direct.GRDirectBean] (default task-3) GR_LIMIT_AMOUNT_TO_NOTIFIED=false
+2025-05-21 18:25:33,101 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.picking.PickingMobileBean
+2025-05-21 18:25:33,102 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.picking.PickingMobileFacade
+2025-05-21 18:25:33,102 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,107 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:25:33,107 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,127 INFO  [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:25:33,129 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) init
+2025-05-21 18:25:33,129 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:25:33,130 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) Navigate: PICK_START, PickingOrder=null
+2025-05-21 18:25:33,130 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.shipping.ShippingBean
+2025-05-21 18:25:33,130 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.facade.LOSGoodsOutFacade
+2025-05-21 18:25:33,130 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,134 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:25:33,134 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,140 INFO  [de.linogistix.mobile.processes.shipping.ShippingBean] (default task-3) SHIPPING_SCAN_DESTINATION=false
+2025-05-21 18:25:33,141 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.replenish.ReplenishMobileBean
+2025-05-21 18:25:33,141 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.replenish.ReplenishMobileFacade
+2025-05-21 18:25:33,142 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,150 INFO  [de.linogistix.mobileserver.processes.replenish.ReplenishMobileFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:25:33,152 INFO  [de.linogistix.mobile.processes.controller.MenuBean] (default task-3) Add dialog de.linogistix.mobile.processes.stocktaking.StockTakingBean
+2025-05-21 18:25:33,152 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryUnitLoadServiceRemote
+2025-05-21 18:25:33,152 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,154 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryItemDataServiceRemote
+2025-05-21 18:25:33,154 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,155 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.inventory.service.QueryStockServiceRemote
+2025-05-21 18:25:33,155 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,156 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.service.QueryStorageLocationServiceRemote
+2025-05-21 18:25:33,156 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,157 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.query.ClientQueryRemote
+2025-05-21 18:25:33,157 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,161 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.stocktaking.facade.LOSStocktakingFacade
+2025-05-21 18:25:33,161 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,166 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.location.query.LOSStorageLocationQueryRemote
+2025-05-21 18:25:33,166 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:33,172 INFO  [de.linogistix.los.stocktaking.facade.LOSStocktakingFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:25:35,576 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.mobileserver.processes.picking.PickingMobileFacade
+2025-05-21 18:25:35,576 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:35,578 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.util.entityservice.LOSSystemPropertyServiceRemote
+2025-05-21 18:25:35,578 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:35,596 INFO  [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) Only one client in system
+2025-05-21 18:25:35,601 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getStateless interface de.linogistix.los.user.query.UserQueryRemote
+2025-05-21 18:25:35,601 DEBUG [de.linogistix.mobile.common.gui.bean.BasicBackingBean] (default task-3) getBeanLocator 
+2025-05-21 18:25:35,784 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) processStartPicking
+2025-05-21 18:25:35,784 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) init
+2025-05-21 18:25:35,784 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:25:35,784 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) resume 
+2025-05-21 18:25:35,784 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) reset 
+2025-05-21 18:25:35,784 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders 
+2025-05-21 18:25:35,789 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders query = SELECT po FROM PickingOrder po  WHERE po.operator=:user AND po.state >=500 AND po.state<700 ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:25:35,794 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getStartedOrders Found 0 orders in 10 ms
+2025-05-21 18:25:35,795 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) Navigate: PICK_ORDER_SELECT, PickingOrder=null
+2025-05-21 18:25:35,863 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Search picking orders. code=null, usePick=true, useTransport=true
+2025-05-21 18:25:35,867 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders query = SELECT po FROM PickingOrder po WHERE po.state>=300 and po.state<700 AND (      ( po.state=300 )  OR ( exists( select 1 from User user where user=po.operator and user=:user ) ) )  and exists( select 1 from PickingOrderLine pp   WHERE pp.pickingOrder = po and pp.pickingType in (:typeList)) ORDER BY po.state DESC, po.prio, po.created ASC
+2025-05-21 18:25:35,881 DEBUG [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) getCalculatedPickingOrders Found 8 orders in 18 ms
+2025-05-21 18:25:35,914 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:25:35,918 INFO  [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) getOrderList Found 8 orders
+2025-05-21 18:25:41,521 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileData] (default task-3) loadOrder id=6202
+2025-05-21 18:25:41,555 DEBUG [de.linogistix.los.inventory.businessservice.LOSOrderBusinessBean] (default task-3) reservePickingOrder order=P000002, ignoreReservationGap=false
+2025-05-21 18:25:41,599 INFO  [de.linogistix.mobileserver.processes.picking.PickingMobileFacadeBean] (default task-3) readUnitLoad No unit load defined for order. id=6202
+2025-05-21 18:25:41,600 DEBUG [de.linogistix.mobile.processes.picking.PickingMobileBean] (default task-3) Navigate: PICK_ORDER_INFO, PickingOrder=P000002
+2025-05-21 19:34:29,762 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0272: Suspending server
+2025-05-21 19:34:29,764 INFO  [org.jboss.as.ejb3] (Thread-1) WFLYEJB0493: EJB subsystem suspension complete
+2025-05-21 19:34:29,767 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0220: Server shutdown has been requested via an OS signal
+2025-05-21 19:34:29,811 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-7) WFLYMAIL0002: Unbound mail session [java:jboss/mail/Default]
+2025-05-21 19:34:29,820 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 177) WFLYUT0022: Unregistered web context: '/los-mobile' from server 'default-server'
+2025-05-21 19:34:29,846 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0019: Host default-host stopping
+2025-05-21 19:34:29,887 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 178) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'mywms.ear/project-persistence.jar#myWMS'
+2025-05-21 19:34:29,889 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 178) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@7b4cb7d6
+2025-05-21 19:34:29,896 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-8) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2025-05-21 19:34:29,899 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 199) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'mywms.ear/project-persistence.jar#myWMS'
+2025-05-21 19:34:29,900 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2025-05-21 19:34:29,900 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) WFLYJCA0010: Unbound data source [java:/losDS]
+2025-05-21 19:34:29,901 INFO  [org.infinispan.manager.DefaultCacheManager] (ServerService Thread Pool -- 185) Stopping cache manager null on null
+2025-05-21 19:34:29,912 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 199) WFLYCLINF0003: Stopped http-remoting-connector cache from ejb container
+2025-05-21 19:34:29,915 INFO  [org.infinispan.manager.DefaultCacheManager] (ServerService Thread Pool -- 199) Stopping cache manager null on null
+2025-05-21 19:34:29,918 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0208: Stopped subdeployment (runtime-name: project-ejb.jar) in 142ms
+2025-05-21 19:34:29,918 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0208: Stopped subdeployment (runtime-name: wms2-ejb.jar) in 124ms
+2025-05-21 19:34:29,918 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0208: Stopped subdeployment (runtime-name: los.mobile-ejb.jar) in 136ms
+2025-05-21 19:34:29,919 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0208: Stopped subdeployment (runtime-name: mywms.as-ejb.jar) in 129ms
+2025-05-21 19:34:29,920 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0208: Stopped subdeployment (runtime-name: project-persistence.jar) in 113ms
+2025-05-21 19:34:29,920 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0208: Stopped subdeployment (runtime-name: los-ejb.jar) in 144ms
+2025-05-21 19:34:29,933 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0019: Stopped Driver service with driver-name = postgresql-42.2.19.jar
+2025-05-21 19:34:29,939 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0208: Stopped subdeployment (runtime-name: los.mobile-web.war) in 150ms
+2025-05-21 19:34:29,942 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0008: Undertow HTTP listener default suspending
+2025-05-21 19:34:29,943 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0028: Stopped deployment postgresql-42.2.19.jar (runtime-name: postgresql-42.2.19.jar) in 146ms
+2025-05-21 19:34:29,942 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0008: Undertow HTTPS listener https suspending
+2025-05-21 19:34:29,943 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 0.0.0.0:8080
+2025-05-21 19:34:29,944 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 0.0.0.0:8443
+2025-05-21 19:34:29,946 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0004: Undertow 2.2.4.Final stopping
+2025-05-21 19:34:29,958 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0028: Stopped deployment mywms.ear (runtime-name: mywms.ear) in 185ms
+2025-05-21 19:34:29,962 INFO  [org.jboss.as] (MSC service thread 1-3) WFLYSRV0050: WildFly Full 22.0.1.Final (WildFly Core 14.0.1.Final) stopped in 188ms

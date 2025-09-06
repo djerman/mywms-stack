@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.base.client.reportengines.table.rpc.TableReportUtilityService
+path: 94E3B34173D00550B7EA07EB20C4387E.gwt.rpc

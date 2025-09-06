@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.gf.client.history.rpc.HistoryRpcService
+path: 300C5C2675364304D1B29C1756938A31.gwt.rpc

@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.samba.client.samba.rpc.SambaRpcService
+path: 2524495456D44ACAC12CED5FD90D1FCE.gwt.rpc

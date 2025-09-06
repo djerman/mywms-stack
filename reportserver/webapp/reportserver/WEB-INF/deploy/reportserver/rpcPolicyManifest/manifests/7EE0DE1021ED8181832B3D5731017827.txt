@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.remoteserver.client.remoteservermanager.eximport.im.rpc.RemoteServerManagerImportRpcService
+path: DCF7B638212F48E25E209F6C4381BB2A.gwt.rpc

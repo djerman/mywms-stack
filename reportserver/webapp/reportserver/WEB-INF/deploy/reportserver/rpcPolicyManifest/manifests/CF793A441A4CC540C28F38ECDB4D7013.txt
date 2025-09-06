@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.core.client.reportmanager.rpc.ReportManagerTreeManager
+path: 43BADF5FE881C80E6178DE65E8070BE7.gwt.rpc

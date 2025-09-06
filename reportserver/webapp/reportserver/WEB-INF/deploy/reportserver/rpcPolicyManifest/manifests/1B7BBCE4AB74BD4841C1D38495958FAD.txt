@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.scriptreport.client.scriptreport.rpc.ScriptReportRpcService
+path: D08F2445F5CC7BAE9B0F2D7B01DF3D57.gwt.rpc

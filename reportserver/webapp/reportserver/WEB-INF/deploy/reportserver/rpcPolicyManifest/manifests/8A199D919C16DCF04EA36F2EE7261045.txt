@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.box.client.box.rpc.BoxRpcService
+path: 79B45FAB28BF283EE2EE6BB7E9AA023D.gwt.rpc

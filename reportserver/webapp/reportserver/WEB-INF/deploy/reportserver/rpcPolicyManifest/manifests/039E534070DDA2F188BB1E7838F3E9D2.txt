@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.core.client.datasourcemanager.rpc.DatasourceTreeManager
+path: 2B5F26ED99E4602A57A8F616AA888890.gwt.rpc

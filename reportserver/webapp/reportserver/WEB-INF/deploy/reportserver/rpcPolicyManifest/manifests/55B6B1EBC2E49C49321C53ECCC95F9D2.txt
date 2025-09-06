@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.globalconstants.client.globalconstants.rpc.GlobalConstantsRpcService
+path: 8278EBABF8A005FA0F9AC7BEC0564D37.gwt.rpc

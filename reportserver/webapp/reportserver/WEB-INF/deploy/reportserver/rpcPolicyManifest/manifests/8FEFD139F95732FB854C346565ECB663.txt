@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.grideditor.client.grideditor.rpc.GridEditorRpcService
+path: 8E7526A6B36FCA529582AC6F21BA36D5.gwt.rpc

@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.oauth.client.oauth.rpc.OAuthRpcService
+path: 5BBA55610998E00724F2CD1E3B37974B.gwt.rpc

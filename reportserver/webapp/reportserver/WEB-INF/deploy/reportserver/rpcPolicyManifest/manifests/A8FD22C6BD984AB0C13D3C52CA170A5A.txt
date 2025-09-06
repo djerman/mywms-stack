@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.dot.client.dot.rpc.DotRpcService
+path: 680CEEEFFE29C589E1A36D3BB829A052.gwt.rpc

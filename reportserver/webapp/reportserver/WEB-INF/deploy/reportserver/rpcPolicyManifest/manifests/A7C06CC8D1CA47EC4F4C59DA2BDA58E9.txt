@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.googledrive.client.googledrive.rpc.GoogleDriveRpcService
+path: A83C2E9D49575D7E7EBE99B6D1A4F779.gwt.rpc

@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.remotersrestserver.client.remotersrestserver.rpc.RemoteRsRestServerRpcService
+path: CB3545B8E15BEDD8680C9D9885D929EA.gwt.rpc

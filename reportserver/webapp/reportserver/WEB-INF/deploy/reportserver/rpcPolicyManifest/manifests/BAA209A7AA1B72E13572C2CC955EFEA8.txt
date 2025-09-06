@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.adminutils.client.logs.rpc.LogFilesRpcService
+path: 4E4D29BD1A563A4EE380A1819B5AA98F.gwt.rpc

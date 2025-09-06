@@ -1,0 +1,11 @@
+/.env
+/srv/pgadata/
+/srv/pgbackup/
+reportserver/work/
+reportserver/temp/
+mywms/deployments/*.ear
+mywms/deployments/*.jar
+*.iml
+.idea/
+.vscode/
+node_modules/

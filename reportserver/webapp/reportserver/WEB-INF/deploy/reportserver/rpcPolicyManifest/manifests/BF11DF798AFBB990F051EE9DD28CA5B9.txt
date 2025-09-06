@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.adminutils.client.systemconsole.memory.rpc.MemoryConsoleRpcService
+path: 2257EDB28C521702096DA96C84031D58.gwt.rpc

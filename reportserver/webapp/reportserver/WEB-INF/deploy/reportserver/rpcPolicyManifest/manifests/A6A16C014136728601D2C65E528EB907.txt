@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.emaildatasink.client.emaildatasink.rpc.EmailDatasinkRpcService
+path: CD7D63893A27FDC1D56F4247890BB7FD.gwt.rpc

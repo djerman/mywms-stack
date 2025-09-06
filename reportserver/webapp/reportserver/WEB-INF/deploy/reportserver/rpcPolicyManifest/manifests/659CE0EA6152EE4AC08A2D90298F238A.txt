@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.base.client.datasources.statementmanager.rpc.StatementManagerRpcService
+path: 5C326A16CB567581C0C23FE5F81C5A79.gwt.rpc

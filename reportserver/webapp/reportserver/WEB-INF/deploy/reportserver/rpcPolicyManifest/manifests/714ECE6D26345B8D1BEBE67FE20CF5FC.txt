@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.core.client.parameters.rpc.ParameterRpcService
+path: 994CEB060E5F617358EC6D6DDF8205F2.gwt.rpc

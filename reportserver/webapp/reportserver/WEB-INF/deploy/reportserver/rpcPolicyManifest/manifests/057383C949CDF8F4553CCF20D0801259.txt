@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.core.client.urlview.rpc.UrlViewRpcService
+path: 21B5F8CD1DF088033F53AE112665AF5B.gwt.rpc

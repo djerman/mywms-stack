@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.dashboard.client.dashboard.rpc.DashboardRpcService
+path: 8E5C34B746C2250565629692DB0628A8.gwt.rpc

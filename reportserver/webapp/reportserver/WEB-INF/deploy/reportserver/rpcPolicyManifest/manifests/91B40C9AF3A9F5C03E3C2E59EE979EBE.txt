@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.remoteserver.client.remoteservermanager.rpc.RemoteServerTreeManager
+path: DEB6B623EBDA904CA9F39020AD919F78.gwt.rpc

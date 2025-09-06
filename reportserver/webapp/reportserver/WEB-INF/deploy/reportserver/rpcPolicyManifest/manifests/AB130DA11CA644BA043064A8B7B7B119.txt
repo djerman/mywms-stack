@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.localfsdatasink.client.localfsdatasink.rpc.LocalFileSystemRpcService
+path: F07606524F5F8DA992D41FF7D2938617.gwt.rpc

@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.security.ext.client.password.PasswordRpcService
+path: 4954858A6BD49507668F71250809D970.gwt.rpc

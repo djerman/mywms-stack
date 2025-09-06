@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.transport.client.transport.rpc.TransportTreeManager
+path: 87C0C40B846DF9DB47D1202A929F8978.gwt.rpc

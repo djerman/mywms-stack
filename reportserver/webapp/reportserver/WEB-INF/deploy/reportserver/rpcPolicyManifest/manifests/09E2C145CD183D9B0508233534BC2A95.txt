@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.base.ext.client.dashboardmanager.eximport.im.rpc.DashboardManagerImportRpcService
+path: 45E69CB789D0F35198D7AEF36C1232F4.gwt.rpc

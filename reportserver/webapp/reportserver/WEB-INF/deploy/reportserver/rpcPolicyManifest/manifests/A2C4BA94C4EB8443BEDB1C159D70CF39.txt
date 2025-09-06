@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.gf.client.config.rpc.ClientConfigRpcService
+path: C37D19F680C058BC7B9184F3660D11C5.gwt.rpc

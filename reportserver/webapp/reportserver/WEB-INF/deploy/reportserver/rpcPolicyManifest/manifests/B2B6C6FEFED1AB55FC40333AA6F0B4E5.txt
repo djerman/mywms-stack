@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.core.client.reportproperties.rpc.ReportPropertiesRpcService
+path: C625F7DB0175D05F01A5AC53BC86F73D.gwt.rpc

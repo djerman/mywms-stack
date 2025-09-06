@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.fileserver.client.fileserver.rpc.FileServerRpcService
+path: C338ABC4EF75420FC30528BB3F6713E2.gwt.rpc

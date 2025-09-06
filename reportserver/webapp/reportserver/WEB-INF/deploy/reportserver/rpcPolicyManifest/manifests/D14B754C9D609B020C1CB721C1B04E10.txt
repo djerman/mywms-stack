@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.adminutils.client.systemconsole.connpool.rpc.ConnectionPoolConsoleRpcService
+path: B55530506DD0AEEF70BAE73F75286915.gwt.rpc

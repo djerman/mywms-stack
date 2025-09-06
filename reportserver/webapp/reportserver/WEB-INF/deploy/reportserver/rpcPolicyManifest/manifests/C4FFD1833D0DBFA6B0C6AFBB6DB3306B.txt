@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.core.client.datasinkmanager.rpc.DatasinkRpcService
+path: C8DFDB1DA2D17F546E2BC1405A0B012D.gwt.rpc

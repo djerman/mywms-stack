@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.transport.client.transport.rpc.TransportRpcService
+path: 84AF26AC4BAC47F0F44D236136531A5D.gwt.rpc

@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.usermanager.ext.client.properties.rpc.UserPropertiesRpcService
+path: 365B5748EFCB772954CD79D592EE38B7.gwt.rpc

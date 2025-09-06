@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.license.client.rpc.LicenseRpcService
+path: D06343D4B4CD0875CACF0F36989F6FA1.gwt.rpc

@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.transport.client.transport.eximport.im.rpc.TransportManagerImportRpcService
+path: 8D572845B7F2A397BA18B11E7DA7E2AA.gwt.rpc

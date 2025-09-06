@@ -1,0 +1,21 @@
+@FinalFields, false
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException, true, true, true, true, com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException/3936916533, 3936916533
+com.google.gwt.user.client.rpc.RpcTokenException, true, true, false, false, com.google.gwt.user.client.rpc.RpcTokenException/2345075298, 2345075298
+com.google.gwt.user.client.rpc.XsrfToken, false, false, true, true, com.google.gwt.user.client.rpc.XsrfToken/4254043109, 4254043109
+java.lang.Exception, true, false, true, false, java.lang.Exception/1920171873, 1920171873
+java.lang.RuntimeException, true, false, true, false, java.lang.RuntimeException/515124647, 515124647
+java.lang.String, true, true, true, true, java.lang.String/2004016611, 2004016611
+java.lang.Throwable, true, false, true, false, java.lang.Throwable/2953622131, 2953622131
+net.datenwerke.gxtdto.client.servercommunication.exceptions.ExpectedException, true, true, false, false, net.datenwerke.gxtdto.client.servercommunication.exceptions.ExpectedException/705044215, 705044215
+net.datenwerke.gxtdto.client.servercommunication.exceptions.NeedForcefulDeleteClientException, true, true, false, false, net.datenwerke.gxtdto.client.servercommunication.exceptions.NeedForcefulDeleteClientException/330449828, 330449828
+net.datenwerke.gxtdto.client.servercommunication.exceptions.NonFatalException, true, true, false, false, net.datenwerke.gxtdto.client.servercommunication.exceptions.NonFatalException/3905235817, 3905235817
+net.datenwerke.gxtdto.client.servercommunication.exceptions.ServerCallFailedException, true, true, false, false, net.datenwerke.gxtdto.client.servercommunication.exceptions.ServerCallFailedException/1463336234, 1463336234
+net.datenwerke.gxtdto.client.servercommunication.exceptions.UnloggableException, true, true, false, false, net.datenwerke.gxtdto.client.servercommunication.exceptions.UnloggableException/38875984, 38875984
+net.datenwerke.gxtdto.client.servercommunication.exceptions.ValidationFailedException, true, true, false, false, net.datenwerke.gxtdto.client.servercommunication.exceptions.ValidationFailedException/3126195466, 3126195466
+net.datenwerke.gxtdto.client.servercommunication.exceptions.ViolatedSecurityExceptionDto, true, true, false, false, net.datenwerke.gxtdto.client.servercommunication.exceptions.ViolatedSecurityExceptionDto/668224195, 668224195
+net.datenwerke.rs.adminutils.client.datasourcetester.ConnectionTestFailedException, true, true, false, false, net.datenwerke.rs.adminutils.client.datasourcetester.ConnectionTestFailedException/446525752, 446525752
+net.datenwerke.rs.adminutils.client.systemconsole.generalinfo.rpc.GeneralInfoRpcService, false, false, false, false, _, 4105794335
+net.datenwerke.rs.core.client.datasinkmanager.DatasinkTestFailedException, true, true, false, false, net.datenwerke.rs.core.client.datasinkmanager.DatasinkTestFailedException/410041855, 410041855
+net.datenwerke.rs.core.client.transport.TransportApplyFailedException, true, true, false, false, net.datenwerke.rs.core.client.transport.TransportApplyFailedException/273243113, 273243113
+net.datenwerke.rs.terminal.client.terminal.dto.exceptions.CommandNotFoundExceptionDto, true, true, false, false, net.datenwerke.rs.terminal.client.terminal.dto.exceptions.CommandNotFoundExceptionDto/454839797, 454839797
+net.datenwerke.rs.terminal.client.terminal.dto.exceptions.SessionNotFoundExceptionDto, true, true, false, false, net.datenwerke.rs.terminal.client.terminal.dto.exceptions.SessionNotFoundExceptionDto/3580867695, 3580867695

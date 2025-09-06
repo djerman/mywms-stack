@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.eximport.client.eximport.im.rpc.ImportRpcService
+path: C99B4DDE691790B7B66D851B5733D7E7.gwt.rpc

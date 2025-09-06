@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.core.client.reportexporter.rpc.ReportExporterRpcService
+path: 86732D1AFB8F7B31A71E3DBCD859A8DD.gwt.rpc

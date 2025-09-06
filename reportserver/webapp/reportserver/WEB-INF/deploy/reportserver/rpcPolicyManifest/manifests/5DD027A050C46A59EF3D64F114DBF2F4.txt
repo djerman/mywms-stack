@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.scp.client.scp.rpc.ScpRpcService
+path: D48D2FDAE8C21BDF490457821ED5118B.gwt.rpc

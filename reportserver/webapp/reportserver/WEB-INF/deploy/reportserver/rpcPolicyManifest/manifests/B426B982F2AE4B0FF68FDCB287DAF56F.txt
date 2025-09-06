@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.keyutils.client.keyutils.rpc.KeyUtilsRpcService
+path: AA885A571A8AE6156D76509E570CFDAE.gwt.rpc

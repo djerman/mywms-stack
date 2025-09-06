@@ -1,0 +1,2 @@
+serviceClass: net.datenwerke.rs.condition.client.condition.rpc.ConditionRpcService
+path: DF7C741F7EF451890CAF8543B2AFB2B1.gwt.rpc
