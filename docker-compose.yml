@@ -105,7 +105,7 @@ services:
       retries: 15
 
   pgadmin:
-    image: dpage/pgadmin4:8
+    image: dpage/pgadmin4:latest
     container_name: pgadmin
     restart: unless-stopped
     depends_on:
