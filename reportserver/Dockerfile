@@ -7,4 +7,4 @@ COPY config /config
 COPY webapp/reportserver /usr/local/tomcat/webapps/reportserver
 
 EXPOSE 8080
-ENV CATALINA_OPTS="-Xms1g -Xmx2g -Djava.net.preferIPv4Stack=true -Drs.configdir=/config -Drs.lucene.dir=/lucene_index"
+ENV CATALINA_OPTS="-Xms1g -Xmx4g -Djava.net.preferIPv4Stack=true -Drs.configdir=/config -Drs.lucene.dir=/lucene_index"

@@ -3,6 +3,8 @@
 /srv/pgbackup/
 reportserver/work/
 reportserver/temp/
+reportserver/logs/
+*.log
 mywms/deployments/*.ear
 mywms/deployments/*.jar
 *.iml

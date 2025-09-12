@@ -90,7 +90,7 @@ services:
         condition: service_completed_successfully
     environment:
       TZ: Europe/Belgrade
-      JAVA_OPTS: "-Xms1g -Xmx2g -Djava.net.preferIPv4Stack=true -Drs.configdir=/config -Drs.lucene.dir=/lucene_index -Duser.timezone=Europe/Belgrade"
+      JAVA_OPTS: "-Xms1g -Xmx4g -Djava.net.preferIPv4Stack=true -Drs.configdir=/config -Drs.lucene.dir=/lucene_index -Duser.timezone=Europe/Belgrade"
     ports:
       - "${RS_HTTP}:8080"
     volumes:
