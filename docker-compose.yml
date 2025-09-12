@@ -35,23 +35,44 @@ services:
       postgres:
         condition: service_healthy
     environment:
+      PGHOST: pg
+      PGUSER: ${POSTGRES_USER}
       PGPASSWORD: ${POSTGRES_PASSWORD}
+      PGDATABASE: ${RS_DB}
     volumes:
       - ./reportserver/webapp/reportserver/ddl:/ddl:ro
-    entrypoint: ["bash","-lc"]
+    entrypoint: ["/bin/bash","-lc"]
     command: >
       set -euo pipefail;
-      DDL=$(ls -1 /ddl/*PostgreSQL*_CREATE.sql | head -n1);
-      echo "[rs_init] Увозим DDL: $DDL";
-      psql -h pg -U ${POSTGRES_USER} -d ${RS_DB} -v ON_ERROR_STOP=1 -f "$DDL";
-      echo "[rs_init] Подешавам власништво и дозволе...";
-      psql -h pg -U ${POSTGRES_USER} -d ${RS_DB} -v ON_ERROR_STOP=1 -c "ALTER DATABASE ${RS_DB} OWNER TO ${RS_USER}; ALTER SCHEMA public OWNER TO ${RS_USER};";
-      psql -h pg -U ${POSTGRES_USER} -d ${RS_DB} -Atc "SELECT 'ALTER TABLE '||quote_ident(schemaname)||'.'||quote_ident(tablename)||' OWNER TO ${RS_USER};' FROM pg_tables WHERE schemaname='public';" | psql -h pg -U ${POSTGRES_USER} -d ${RS_DB};
-      psql -h pg -U ${POSTGRES_USER} -d ${RS_DB} -Atc "SELECT 'ALTER SEQUENCE '||quote_ident(sequence_schema)||'.'||quote_ident(sequence_name)||' OWNER TO ${RS_USER};' FROM information_schema.sequences WHERE sequence_schema='public';" | psql -h pg -U ${POSTGRES_USER} -d ${RS_DB};
-      psql -h pg -U ${POSTGRES_USER} -d ${RS_DB} -v ON_ERROR_STOP=1 -c "GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO ${RS_USER}; GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO ${RS_USER};";
-      psql -h pg -U ${POSTGRES_USER} -d ${RS_DB} -v ON_ERROR_STOP=1 -c "ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO ${RS_USER}; ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO ${RS_USER};";
-      echo "[rs_init] Готово."
+      # 0) Ako već postoje tabele u public šemi, ne radi ništa (idempotentno)
+      if [ "$(psql -tAc "select count(*) from information_schema.tables where table_schema='public'")" != "0" ]; then
+        echo "[rs_init] RS schema već postoji; preskačem import.";
+        exit 0;
+      fi;
+      # 1) Nađi zvanični DDL fajl
+      DDL="$(ls -1 /ddl/*PostgreSQL*_CREATE.sql | head -n1)";
+      if [ -z "${DDL}" ]; then
+        echo "[rs_init] Greška: DDL fajl nije pronađen u /ddl"; exit 1;
+      fi;
+      echo "[rs_init] Uvozim DDL: ${DDL}";
+      psql -v ON_ERROR_STOP=1 -f "${DDL}";
+      # 2) Vlasništvo i privilegije
+      echo "[rs_init] Podešavam vlasništvo i privilegije...";
+      psql -v ON_ERROR_STOP=1 <<SQL
+      ALTER DATABASE ${RS_DB} OWNER TO ${RS_USER};
+      ALTER SCHEMA public OWNER TO ${RS_USER};
+      GRANT USAGE ON SCHEMA public TO ${RS_USER};
+      GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO ${RS_USER};
+      GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO ${RS_USER};
+      ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO ${RS_USER};
+      ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO ${RS_USER};
+SQL
+      # 3) Prenesi vlasništvo nad postojećim objektima
+      psql -Atc "SELECT 'ALTER TABLE '||quote_ident(schemaname)||'.'||quote_ident(tablename)||' OWNER TO ${RS_USER};' FROM pg_tables WHERE schemaname='public';" | psql
+      psql -Atc "SELECT 'ALTER SEQUENCE '||quote_ident(sequence_schema)||'.'||quote_ident(sequence_name)||' OWNER TO ${RS_USER};' FROM information_schema.sequences WHERE sequence_schema='public';" | psql
+      echo "[rs_init] Gotovo."
     restart: "no"
+
 
   mywms:
     build: ./mywms
