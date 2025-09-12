@@ -11,3 +11,10 @@ mywms/deployments/*.jar
 .idea/
 .vscode/
 node_modules/
+# Seed dump za inicijalno punjenje baze (namerno nije u git-u)
+postgres/init/mywms
+postgres/init/mywms.*
+
+# Rezervne kopije baza
+postgres/backup/*.dump
+
