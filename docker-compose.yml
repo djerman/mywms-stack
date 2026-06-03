@@ -13,8 +13,11 @@ services:
       RS_DB: ${RS_DB}
       RS_USER: ${RS_USER}
       RS_PASS: ${RS_PASS}
-    ports:
-      - "${PG_PORT}:5432"
+    # PostgreSQL is intentionally not published on the VPS host.
+    # Containers reach it through the compose network at pg:5432.
+    # Uncomment only for controlled host-side maintenance:
+    # ports:
+    #   - "${PG_PORT}:5432"
     volumes:
       - ${PG_HOST_DATA}:/var/lib/postgresql/data
       - ./postgres/init:/docker-entrypoint-initdb.d:ro
