@@ -61,7 +61,7 @@ services:
       DB_NAME: ${MYWMS_DB}
       DB_USER: ${MYWMS_USER}
       DB_PASS: ${MYWMS_PASS}
-      JAVA_OPTS: "-Xms1g -Xmx2g -Djava.net.preferIPv4Stack=true"
+      JAVA_OPTS: "-Xms1g -Xmx2g -Djava.net.preferIPv4Stack=true -Dmywms.db.url=jdbc:postgresql://pg:5432/${MYWMS_DB} -Dmywms.db.user=${MYWMS_USER} -Dmywms.db.password=${MYWMS_PASS}"
     ports:
       - "${MYWMS_HTTP}:8080"
       - "${MYWMS_MGMT}:9990"
@@ -84,7 +84,12 @@ services:
         condition: service_completed_successfully
     environment:
       TZ: Europe/Belgrade
-      JAVA_OPTS: "-Xms1g -Xmx4g -Djava.net.preferIPv4Stack=true -Drs.configdir=/config -Drs.lucene.dir=/lucene_index -Duser.timezone=Europe/Belgrade"
+      DB_HOST: pg
+      DB_PORT: 5432
+      RS_DB: ${RS_DB}
+      RS_USER: ${RS_USER}
+      RS_PASS: ${RS_PASS}
+      JAVA_OPTS: "-Xms1g -Xmx4g -Djava.net.preferIPv4Stack=true -Drs.configdir=/runtime-config -Drs.lucene.dir=/lucene_index -Duser.timezone=Europe/Belgrade"
     ports:
       - "${RS_HTTP}:8080"
     volumes:

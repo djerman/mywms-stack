@@ -166,7 +166,7 @@
         <subsystem xmlns="urn:jboss:domain:datasources:6.0">
             <datasources>
                 <datasource jta="true" jndi-name="java:/losDS" pool-name="PostgreSQLPool" enabled="true" use-java-context="true" use-ccm="true">
-                    <connection-url>jdbc:postgresql://pg:5432/mywms</connection-url>
+                    <connection-url>${mywms.db.url:jdbc:postgresql://pg:5432/mywms}</connection-url>
                     <driver-class>org.postgresql.Driver</driver-class>
                     <driver>postgresql-42.2.19.jar</driver>
                     <transaction-isolation>TRANSACTION_READ_COMMITTED</transaction-isolation>
@@ -178,8 +178,8 @@
                         <flush-strategy>FailingConnectionOnly</flush-strategy>
                     </pool>
                     <security>
-                        <user-name>mywms</user-name>
-                        <password>mywms</password>
+                        <user-name>${mywms.db.user:mywms}</user-name>
+                        <password>${mywms.db.password:mywms}</password>
                     </security>
                 </datasource>
                 <datasource jndi-name="java:jboss/datasources/ExampleDS" pool-name="ExampleDS" enabled="true" use-java-context="true" statistics-enabled="${wildfly.datasources.statistics-enabled:${wildfly.statistics-enabled:false}}">

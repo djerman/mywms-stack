@@ -75,7 +75,7 @@ mywms-stack/
 ├─ docker-compose.yml
 ├─ postgres/
 │  ├─ conf/{pg_hba.conf, postgresql.conf}
-│  └─ init/{01-create-db-users.sql, 02-load-mywms.sh, rs_post_init.sql}
+│  └─ init/{01-create-db-users.sh, 02-load-mywms.sh, rs_post_init.sql}
 ├─ mywms/
 │  ├─ Dockerfile
 │  ├─ standalone.xml

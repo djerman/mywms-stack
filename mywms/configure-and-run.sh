@@ -3,6 +3,7 @@ set -euo pipefail
 JBOSS_HOME=${JBOSS_HOME:-/opt/jboss/wildfly}
 DS_NAME=${DS_NAME:-PostgreSQLPool}
 JNDI_NAME=${JNDI_NAME:-java:/losDS}
+DB_PASSWORD=${DB_PASSWORD:-${DB_PASS:?DB_PASS is required}}
 
 ${JBOSS_HOME}/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0 &
 until ${JBOSS_HOME}/bin/jboss-cli.sh --connect ":read-attribute(name=server-state)" | grep -q running; do sleep 1; done
@@ -40,4 +41,3 @@ end-if
 EOF
 
 wait -n
-
