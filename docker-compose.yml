@@ -67,7 +67,9 @@ services:
       JAVA_OPTS: "-Xms1g -Xmx2g -Djava.net.preferIPv4Stack=true -Dmywms.db.url=jdbc:postgresql://pg:5432/${MYWMS_DB} -Dmywms.db.user=${MYWMS_USER} -Dmywms.db.password=${MYWMS_PASS}"
     ports:
       - "${MYWMS_HTTP}:8080"
-      - "${MYWMS_MGMT}:9990"
+      # WildFly management is intentionally not published on the VPS host.
+      # Uncomment only for controlled host-side maintenance:
+      # - "${MYWMS_MGMT}:9990"
     volumes:
       - ./mywms/deployments:/opt/wildfly/standalone/deployments
     healthcheck:
