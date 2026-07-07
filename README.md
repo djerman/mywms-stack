@@ -126,6 +126,9 @@ docker exec -it mywms lpstat -p
 Servers without printer integration continue to use the standard startup
 commands from the previous section.
 
+For the verified Toshiba B-FV4 label printer setup used for myWMS Goods Receipt
+labels, see [TOSHIBA_BFV4_LABEL_PRINTING.md](TOSHIBA_BFV4_LABEL_PRINTING.md).
+
 ## PostgreSQL schema import for ReportServer
 The `rs_init` one-shot service runs the official DDL:
 - `reportserver/webapp/reportserver/ddl/reportserver-RS4.7.7-6117-schema-PostgreSQL_CREATE.sql`
