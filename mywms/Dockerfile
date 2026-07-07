@@ -1,5 +1,9 @@
 FROM eclipse-temurin:11-jre
 
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends cups-client \
+    && rm -rf /var/lib/apt/lists/*
+
 # Додај WF 22 сервер (директоријум мора бити присутан локално у mywms/)
 ADD wildfly-22.0.1.Final /opt/wildfly
 ENV JBOSS_HOME=/opt/wildfly
@@ -11,4 +15,3 @@ COPY standalone.xml ${JBOSS_HOME}/standalone/configuration/standalone.xml
 # deployments НЕ печемо у слику — .ear и PgJDBC .jar долазе као volume
 EXPOSE 8080 9990
 ENTRYPOINT ["bash","-lc","${JBOSS_HOME}/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0"]
-

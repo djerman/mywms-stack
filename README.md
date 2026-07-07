@@ -10,6 +10,7 @@
 - [Environment variables](#environment-variables)
 - [Directory layout](#directory-layout)
 - [Startup & shutdown](#startup--shutdown)
+- [Optional printing support](#optional-printing-support)
 - [PostgreSQL schema import for ReportServer](#postgresql-schema-import-for-reportserver)
 - [Updating `mywms.ear`](#updating-mywms-ear)
 - [Backups & restore](#backups--restore)
@@ -73,6 +74,7 @@ docker compose logs -f reportserver
 mywms-stack/
 ├─ .env
 ├─ docker-compose.yml
+├─ docker-compose.printing.yml
 ├─ postgres/
 │  ├─ conf/{pg_hba.conf, postgresql.conf}
 │  └─ init/{01-create-db-users.sh, 02-load-mywms.sh, rs_post_init.sql}
@@ -97,6 +99,26 @@ docker compose up -d mywms reportserver
 docker compose stop reportserver mywms
 docker compose stop postgres
 ```
+
+## Optional printing support
+The base `mywms` image includes CUPS client tools (`lp`, `lpstat`) so the
+application can use server-side printing when a deployment enables it.
+
+Use the printing override only on hosts that have CUPS configured and a working
+`/var/run/cups/cups.sock` socket:
+
+```bash
+# Build/recreate myWMS with access to host CUPS
+docker compose -f docker-compose.yml -f docker-compose.printing.yml build mywms
+docker compose -f docker-compose.yml -f docker-compose.printing.yml up -d mywms
+
+# Verify from inside the container
+docker exec -it mywms which lp
+docker exec -it mywms lpstat -p
+```
+
+Servers without printer integration continue to use the standard startup
+commands from the previous section.
 
 ## PostgreSQL schema import for ReportServer
 The `rs_init` one-shot service runs the official DDL:

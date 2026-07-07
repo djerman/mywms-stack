@@ -1,0 +1,4 @@
+services:
+  mywms:
+    volumes:
+      - /var/run/cups/cups.sock:/var/run/cups/cups.sock
