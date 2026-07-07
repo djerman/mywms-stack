@@ -6,6 +6,7 @@
 ## Contents
 - [Architecture](#architecture)
 - [Prerequisites](#prerequisites)
+- [Verified VPS deployment](#verified-vps-deployment)
 - [Quick start](#quick-start)
 - [Environment variables](#environment-variables)
 - [Directory layout](#directory-layout)
@@ -28,6 +29,11 @@
 - Ubuntu 20.04/22.04/24.04 (or compatible)
 - RAM: 8–16 GB, CPU: 2–4 vCPU recommended
 - Host paths created: `/srv/pgadata`, `/srv/pgbackup` (owned by the Docker user)
+
+## Verified VPS deployment
+For the verified Ubuntu 24.04 VPS deployment flow, including firewall, fail2ban,
+clean PostgreSQL initialization without a myWMS data dump, and the checked port
+layout, see [VPS_UBUNTU_24_04_DEPLOYMENT.md](VPS_UBUNTU_24_04_DEPLOYMENT.md).
 
 ## Quick start
 ```bash
@@ -61,9 +67,9 @@ docker compose logs -f reportserver
 | `RS_DB` | `reportserver` | ReportServer DB name |
 | `RS_USER` | `reportserver` | ReportServer DB user |
 | `RS_PASS` | `reportserver` | ReportServer DB password |
-| `PG_PORT` | `5432` | Host port for PostgreSQL |
-| `MYWMS_HTTP` | `8080` | Host port → WF HTTP |
-| `MYWMS_MGMT` | `9990` | Host port → WF management |
+| `PG_PORT` | `5432` | Inactive by default; PostgreSQL is not published on the host |
+| `MYWMS_HTTP` | `80` | Host port → WF HTTP |
+| `MYWMS_MGMT` | `9990` | Inactive by default; WildFly management is not published on the host |
 | `RS_HTTP` | `8085` | Host port → Tomcat |
 | `PGADMIN_HTTP` | `5050` | (If using pgAdmin container) |
 | `PG_HOST_DATA` | `/srv/pgadata` | Host volume for PGDATA |
