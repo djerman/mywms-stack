@@ -399,7 +399,64 @@ cancel -a TOSHIBA_BFV4_203_TPCL
 Oznaka, Datum, Artikal, Lot, Naziv
 ```
 
-## 13. Резиме проверене production поставке
+## 13. Оперативна напомена после restart-а CUPS-а или rebuild-а container-а
+
+Ако је myWMS container покренут са `docker-compose.printing.yml`, али штампа
+после restart-а/rebuild-а не ради, прво проверити CUPS из container-а:
+
+```bash
+docker exec -it mywms lpstat -p
+```
+
+Ако команда врати:
+
+```text
+lpstat: Scheduler is not running.
+```
+
+а host CUPS ради:
+
+```bash
+systemctl status cups --no-pager
+```
+
+најчешћи узрок је да container више не користи активан host CUPS socket.
+Ово се може десити после restart-а CUPS-а или после rebuild/recreate myWMS
+container-а. У том случају restart-овати само `mywms` container са printing
+override-ом:
+
+```bash
+cd /opt/stacks/mywms-stack
+docker compose -f docker-compose.yml -f docker-compose.printing.yml restart mywms
+```
+
+После restart-а обавезно проверити:
+
+```bash
+docker exec -it mywms lpstat -p
+docker exec -it mywms lpstat -v TOSHIBA_BFV4_203_TPCL
+```
+
+Ако и даље не види CUPS scheduler, урадити recreate само `mywms` сервиса:
+
+```bash
+cd /opt/stacks/mywms-stack
+docker compose -f docker-compose.yml -f docker-compose.printing.yml up -d --force-recreate mywms
+```
+
+Ово не дира PostgreSQL нити податке; поново креира само `mywms` container са
+актуелним `/var/run/cups/cups.sock` mount-ом.
+
+Препоручена провера после сваког deploy-а на серверу који користи штампу:
+
+```bash
+cd /opt/stacks/mywms-stack
+docker exec -it mywms lpstat -p
+```
+
+Ако се добије списак штампача, Docker/CUPS део је спреман за myWMS штампу.
+
+## 14. Резиме проверене production поставке
 
 Минимални скуп који мора бити тачан:
 
@@ -418,4 +475,3 @@ Container mount: /var/run/cups/cups.sock:/var/run/cups/cups.sock
 myWMS printer value: cmd:/usr/bin/lp -d TOSHIBA_BFV4_203_TPCL :file:
 Jasper template: Izvestaji/StockUnitLabel_100x50_Vukohem.jrxml
 ```
-
