@@ -166,15 +166,20 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 ```
 
-Host CUPS socket се у myWMS container прослеђује преко override compose фајла
-`docker-compose.printing.yml`:
+Host CUPS runtime директоријум се у myWMS container прослеђује преко override
+compose фајла `docker-compose.printing.yml`:
 
 ```yaml
 services:
   mywms:
     volumes:
-      - /var/run/cups/cups.sock:/var/run/cups/cups.sock
+      - /var/run/cups:/var/run/cups
 ```
+
+Намерно се mount-ује цео `/var/run/cups` директоријум, а не конкретан
+`cups.sock` фајл. Host CUPS може после restart-а да поново креира socket са
+новим inode-ом; ако је у container mount-ован само стари socket фајл, `lpstat`
+у container-у може да врати `Scheduler is not running` иако CUPS на host-у ради.
 
 Сервери који немају штампач не морају да користе овај override. Основни
 `docker-compose.yml` остаје исти за све сервере.
@@ -204,7 +209,7 @@ docker compose up -d
 
 ## 8. Провера из Docker container-а
 
-Проверити да container види CUPS socket:
+Проверити да container види CUPS runtime mount:
 
 ```bash
 docker inspect mywms --format '{{range .Mounts}}{{println .Source "->" .Destination}}{{end}}' | grep cups
@@ -213,7 +218,7 @@ docker inspect mywms --format '{{range .Mounts}}{{println .Source "->" .Destinat
 Очекивано:
 
 ```text
-/var/run/cups/cups.sock -> /var/run/cups/cups.sock
+/var/run/cups -> /var/run/cups
 ```
 
 Проверити да container види CUPS queue:
@@ -232,7 +237,8 @@ device for TOSHIBA_BFV4_203_TPCL: socket://192.168.1.5:9100
 ```
 
 Ако `lpstat` у container-у врати `Scheduler is not running`, container најчешће
-не види host CUPS socket или је myWMS покренут без `docker-compose.printing.yml`.
+не види host CUPS runtime директоријум или је myWMS покренут без
+`docker-compose.printing.yml`.
 
 ## 9. myWMS системска својства
 
@@ -385,7 +391,7 @@ cancel -a TOSHIBA_BFV4_203_TPCL
 3. да је Toshiba driver инсталиран
 4. да је queue направљен са `ToshibaTEC_B-FV4-T.ppd`
 5. да је штампач у `TPCL` emulation mode-у
-6. да myWMS container види CUPS socket
+6. да myWMS container види CUPS runtime mount
 7. да је myWMS параметар тачно:
    `cmd:/usr/bin/lp -d TOSHIBA_BFV4_203_TPCL :file:`
 
@@ -420,32 +426,57 @@ lpstat: Scheduler is not running.
 systemctl status cups --no-pager
 ```
 
-најчешћи узрок је да container више не користи активан host CUPS socket.
-Ово се може десити после restart-а CUPS-а или после rebuild/recreate myWMS
-container-а. У том случају restart-овати само `mywms` container са printing
-override-ом:
+најчешћи узрок је да container не види активан host CUPS runtime директоријум.
+Override мора да mount-ује директоријум `/var/run/cups:/var/run/cups`, а не
+само фајл `/var/run/cups/cups.sock`.
+
+Проверити override:
 
 ```bash
 cd /opt/stacks/mywms-stack
-docker compose -f docker-compose.yml -f docker-compose.printing.yml restart mywms
+cat docker-compose.printing.yml
 ```
 
-После restart-а обавезно проверити:
+Исправан садржај:
 
-```bash
-docker exec -it mywms lpstat -p
-docker exec -it mywms lpstat -v TOSHIBA_BFV4_203_TPCL
+```yaml
+services:
+  mywms:
+    volumes:
+      - /var/run/cups:/var/run/cups
 ```
 
-Ако и даље не види CUPS scheduler, урадити recreate само `mywms` сервиса:
+После измене override-а поново креирати само `mywms` container:
 
 ```bash
 cd /opt/stacks/mywms-stack
 docker compose -f docker-compose.yml -f docker-compose.printing.yml up -d --force-recreate mywms
 ```
 
-Ово не дира PostgreSQL нити податке; поново креира само `mywms` container са
-актуелним `/var/run/cups/cups.sock` mount-ом.
+После recreate-а обавезно проверити:
+
+```bash
+docker inspect mywms --format '{{range .Mounts}}{{println .Source "->" .Destination}}{{end}}' | grep cups
+docker exec -it mywms lpstat -p
+docker exec -it mywms lpstat -v TOSHIBA_BFV4_203_TPCL
+```
+
+Очекивано је да mount буде:
+
+```text
+/var/run/cups -> /var/run/cups
+```
+
+Ако је потребно само хитно враћање штампе пре измене override-а, може се
+привремено restart-овати container:
+
+```bash
+cd /opt/stacks/mywms-stack
+docker compose -f docker-compose.yml -f docker-compose.printing.yml restart mywms
+```
+
+То не дира PostgreSQL нити податке, али није трајно решење ако override и даље
+mount-ује само `cups.sock`.
 
 Препоручена провера после сваког deploy-а на серверу који користи штампу:
 
@@ -471,7 +502,7 @@ CUPS PageSize: 2x4Rotated.FullBleed
 CUPS Sensor: Transmissive
 CUPS LabelGap: 20
 Docker override: docker-compose.printing.yml
-Container mount: /var/run/cups/cups.sock:/var/run/cups/cups.sock
+Container mount: /var/run/cups:/var/run/cups
 myWMS printer value: cmd:/usr/bin/lp -d TOSHIBA_BFV4_203_TPCL :file:
 Jasper template: Izvestaji/StockUnitLabel_100x50_Vukohem.jrxml
 ```

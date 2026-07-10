@@ -110,8 +110,9 @@ docker compose stop postgres
 The base `mywms` image includes CUPS client tools (`lp`, `lpstat`) so the
 application can use server-side printing when a deployment enables it.
 
-Use the printing override only on hosts that have CUPS configured and a working
-`/var/run/cups/cups.sock` socket:
+Use the printing override only on hosts that have CUPS configured. The override
+mounts `/var/run/cups` from the host so the container follows the active CUPS
+socket even after the host scheduler recreates it:
 
 ```bash
 # Build/recreate myWMS with access to host CUPS
